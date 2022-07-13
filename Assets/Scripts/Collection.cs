@@ -50,6 +50,10 @@ namespace Controller
 //------------------------------------------
 // インターフェイス
 //------------------------------------------
+public interface IApplyDamage
+{
+	void ApplyDamage(float damage);
+}
 
 
 //------------------------------------------
