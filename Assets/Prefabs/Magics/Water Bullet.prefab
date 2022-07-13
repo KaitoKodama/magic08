@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5433394693586206069}
   - component: {fileID: 129848320020979561}
   - component: {fileID: 2036483844029564076}
+  - component: {fileID: 7238008909089853214}
   m_Layer: 0
   m_Name: Water Bullet
   m_TagString: Untagged
@@ -4783,3 +4784,16 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!135 &7238008909089853214
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428496601925798567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}

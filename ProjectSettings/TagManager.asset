@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EnableSelecter
   - Actor
+  - Pinch
   layers:
   - Default
   - TransparentFX

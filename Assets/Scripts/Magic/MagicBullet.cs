@@ -23,6 +23,7 @@ public class MagicBullet : Magic
 
     public override void OnGenerate(DataVisual data, Transform origin)
     {
+        this.data = data;
         trackTarget = origin;
         transform.position = origin.position;
     }

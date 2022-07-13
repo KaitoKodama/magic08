@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Controller;
+using DG.Tweening;
 
 
 //------------------------------------------
@@ -26,6 +27,7 @@ public class AnyDictionary<Tkey, Tvalue>
 	}
 }
 
+
 namespace Controller
 {
 	[Serializable]
@@ -41,22 +43,6 @@ namespace Controller
 			rigTarget.rotation = vrTarget.rotation * Quaternion.Euler(rot);
 		}
 	}
-	[Serializable]
-	public class StaffLocater
-    {
-		public Transform staffParent = default;
-
-		public void SetStaffLocation(Transform staff)
-		{
-			staff.parent = staffParent;
-			staff.localPosition = Vector3.zero;
-			staff.localRotation = Quaternion.Euler(Vector3.zero);
-		}
-		public void UnsetStaffLocation(Transform staff)
-        {
-			staff.parent = null;
-		}
-    }
 	public enum StaffHoldingHand { LeftHand, RightHand }
 }
 

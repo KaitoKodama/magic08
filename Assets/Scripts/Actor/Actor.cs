@@ -1,29 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Controller;
 using CMN;
 using State = StateMachine<Actor>.State;
 
 public class Actor : MonoBehaviour
 {
-    [SerializeField] StaffLocater leftLocater = default;
-    [SerializeField] StaffLocater rightLocater = default;
-    [SerializeField] StaffHoldingHand staffHoldingHand = default;
-    private OVRInput.Controller staffHoldController;
-    private OVRInput.Controller staffHoldInverseController;
+    [SerializeField] Staff staff = default;
+    [SerializeField] float moveSpeed = 1f;
 
-    private Staff staff;
-    private Animator animator;
-    private MagicSelecter selecter;
-    private StaffLocater enableLocater;
     private OVRPlayerController playerController;
     private StateMachine<Actor> stateMachine;
 
-    private readonly int GripLeftHash = Animator.StringToHash("GripLeft");
-    private readonly int GripRightHash = Animator.StringToHash("GripRight");
-    private readonly int TriggerLeftHash = Animator.StringToHash("TriggerLeft");
-    private readonly int TriggerRightHash = Animator.StringToHash("TriggerRight");
     private bool isStaffHolding = false;
 
 
@@ -32,12 +20,8 @@ public class Actor : MonoBehaviour
     //------------------------------------------
     private void Awake()
     {
-        staff = GetComponentInChildren<Staff>();
-        animator = GetComponentInChildren<Animator>();
-        selecter = GetComponentInChildren<MagicSelecter>();
-        playerController = GetComponentInChildren<OVRPlayerController>();
-        playerController.SetMoveScaleMultiplier(0.5f);
-        SetStaffHoldingHand(staffHoldingHand);
+        playerController = GetComponent<OVRPlayerController>();
+        playerController.SetMoveScaleMultiplier(moveSpeed);
     }
     void Start()
     {
@@ -58,37 +42,23 @@ public class Actor : MonoBehaviour
     // 外部共有関数
     //------------------------------------------
     public delegate void OnStaffHolingNotifyer(bool isHolding);
-    public OnStaffHolingNotifyer OnStaffHolingNotifyerHandler;
-    public OVRInput.Controller StaffHoldController => staffHoldController;
-    public OVRInput.Controller StaffHoldInverseController => staffHoldInverseController;
+    public delegate void OnMagicShoot(bool enable);
+    public event OnStaffHolingNotifyer OnStaffHolingNotifyerHandler;
+    public event OnMagicShoot OnMagicShootHandler;
 
 
     //------------------------------------------
     // 内部共有関数
     //------------------------------------------
-    private void UpdateHandAnimation()
-    {
-        float triggerL = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.LTouch);
-        float indexL = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.LTouch);
-        float triggerR = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch);
-        float indexR = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch);
-
-        animator.SetFloat(GripRightHash, triggerR);
-        animator.SetFloat(TriggerRightHash, indexR);
-        animator.SetFloat(GripLeftHash, triggerL);
-        animator.SetFloat(TriggerLeftHash, indexL);
-    }
     private void UpdateStaffLocater()
     {
-        float trigger = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, staffHoldController);
-        float index = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, staffHoldController);
-        float gripAmount = index + trigger;
+        var input = Locator<ActorInput>.I;
+        float gripAmount = input.GetIndex() + input.GetTrigger();
         float gripAmountRequire = 1.5f;
         if (gripAmount >= gripAmountRequire)
         {
             if (!isStaffHolding)
             {
-                enableLocater.SetStaffLocation(staff.transform);
                 OnStaffHolingNotifyerHandler?.Invoke(true);
                 isStaffHolding = true;
             }
@@ -97,61 +67,37 @@ public class Actor : MonoBehaviour
         {
             if (isStaffHolding)
             {
-                enableLocater.UnsetStaffLocation(staff.transform);
                 OnStaffHolingNotifyerHandler?.Invoke(false);
                 isStaffHolding = false;
             }
         }
-        staff.SetShader(((gripAmount / 2) * -1) + 1);
     }
     private void UpdateSelecterRequest()
     {
-        bool trigger = OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, staffHoldInverseController);
-        bool index = OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, staffHoldInverseController);
+        bool exist = staff.IsShootEnable;
         if (isStaffHolding)
         {
-            if (trigger)
+            var input = Locator<ActorInput>.I;
+            if (input.IsTrigger(true))
             {
-                selecter.RequestSwapGridContent(staff.Tips);
+                OnMagicShootHandler?.Invoke(false);
             }
-            if (selecter.IsResisterExist)
+            if (exist)
             {
-                if (index)
+                if (input.IsIndex(true))
                 {
-                    selecter.RequestExcute(staff.Tips);
+                    OnMagicShootHandler?.Invoke(true);
                 }
             }
         }
         else
         {
-            if (selecter.IsResisterExist)
+            if (exist)
             {
-                selecter.RequestExcute(staff.Tips);
+                OnMagicShootHandler?.Invoke(true);
             }
         }
     }
-
-    private void SetStaffHoldingHand(StaffHoldingHand expectHand)
-    {
-        staffHoldingHand = expectHand;
-        var locater = (staffHoldingHand == StaffHoldingHand.LeftHand) ? leftLocater : rightLocater;
-        enableLocater = locater;
-
-        staffHoldController = Utility.GetEnableOVRController(staffHoldingHand);
-        staffHoldInverseController = Utility.GetEnableOVRController(staffHoldingHand, true);
-    }
-    private void ResetStaffStates()
-    {
-        staff.SetShader(1f, true);
-        enableLocater.UnsetStaffLocation(staff.transform);
-        OnStaffHolingNotifyerHandler?.Invoke(false);
-        isStaffHolding = false;
-    }
-
-
-    //------------------------------------------
-    // イベント通知
-    //------------------------------------------
 
 
     //------------------------------------------
@@ -159,35 +105,14 @@ public class Actor : MonoBehaviour
     //------------------------------------------
     enum Event
     {
-        BeginNormal, BeginBattle, OpenMenu, GameOver,
+        BeginNormal
     }
     private class StateNormal : State
     {
         protected override void OnUpdate()
         {
             owner.UpdateStaffLocater();
-            owner.UpdateHandAnimation();
             owner.UpdateSelecterRequest();
-        }
-    }
-    private class StateBattle : State
-    {
-        protected override void OnUpdate()
-        {
-            owner.UpdateStaffLocater();
-            owner.UpdateHandAnimation();
-            owner.UpdateSelecterRequest();
-        }
-    }
-    private class StateMenuOperation : State
-    {
-        protected override void OnEnter(State prevState)
-        {
-            owner.ResetStaffStates();
-        }
-        protected override void OnUpdate()
-        {
-            owner.UpdateHandAnimation();
         }
     }
 }

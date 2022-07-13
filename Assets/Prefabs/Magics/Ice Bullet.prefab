@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1827124519332804965}
   - component: {fileID: 2942925606298809338}
   - component: {fileID: 6940016625336770276}
+  - component: {fileID: 2967646084882159194}
   m_Layer: 0
   m_Name: Ice Bullet
   m_TagString: Untagged
@@ -4783,3 +4784,16 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!135 &2967646084882159194
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6485751822743626034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}

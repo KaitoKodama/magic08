@@ -50,4 +50,22 @@ public class StageSOEditor : Editor
 		serializedObject.ApplyModifiedProperties();
 	}
 }
+
+[CustomEditor(typeof(UICButton)), CanEditMultipleObjects]
+public class UICButtonEditor : Editor
+{
+	SerializedProperty triggerTag;
+
+	private void OnEnable()
+	{
+		triggerTag = serializedObject.FindProperty("triggerTag");
+	}
+	public override void OnInspectorGUI()
+	{
+		base.OnInspectorGUI();
+		serializedObject.Update();
+		triggerTag.stringValue = EditorGUILayout.TagField("TriggerTag", triggerTag.stringValue);
+		serializedObject.ApplyModifiedProperties();
+	}
+}
 #endif

@@ -6,8 +6,10 @@ using DG.Tweening;
 
 public class MagicGrid : MonoBehaviour
 {
+    [SerializeField] RectTransform boxrect = default;
     [SerializeField] Text textJa = default;
     [SerializeField] Text textEn = default;
+
     private MagicSelecter selecter;
     private MagicData data;
 
@@ -16,7 +18,7 @@ public class MagicGrid : MonoBehaviour
     {
         if (other.CompareTag("EnableSelecter"))
         {
-            SetTextAlpha(1f);
+            OnGridHovered(1f, 0.1f, -2f);
             selecter.GridDataReciever(data);
         }
     }
@@ -24,14 +26,13 @@ public class MagicGrid : MonoBehaviour
     {
         if (other.CompareTag("EnableSelecter"))
         {
-            SetTextAlpha(0.3f);
+            OnGridHovered(0.3f, 0.09f, 0f);
         }
     }
 
 
     public void Init(MagicSelecter selecter, float degZ)
     {
-        SetTextAlpha(0.3f);
         transform.rotation = transform.rotation * Quaternion.Euler(new Vector3(0, 0, degZ));
         this.selecter = selecter;
     }
@@ -40,14 +41,15 @@ public class MagicGrid : MonoBehaviour
         this.data = data;
         gameObject.SetActive(true);
         SetTextScramble(data.NameJa, data.NameEn);
-        SetGridEffect(4f, 0f);
+        OnGridHovered(0.3f, 0.09f, 0f);
+        SetGridLocate(4f, 0f);
     }
     public void SetMagicData(string ja, string en)
     {
         this.data = null;
         gameObject.SetActive(true);
         SetTextScramble(ja, en);
-        SetGridEffect(4f, 0f);
+        SetGridLocate(4f, 0f);
     }
     public void ResetMagicData()
     {
@@ -55,17 +57,21 @@ public class MagicGrid : MonoBehaviour
         textEn.text = "";
         gameObject.SetActive(false);
     }
-    private void SetTextAlpha(float alpha)
+
+
+    private void OnGridHovered(float alpha, float scale, float z)
     {
         textJa.color = new Color(1, 1, 1, alpha);
         textEn.color = new Color(1, 1, 1, alpha);
+        boxrect.DOScale(scale, 0.5f);
+        boxrect.DOLocalMoveZ(z, 0.5f);
     }
     private void SetTextScramble(string ja, string en)
     {
         textJa.DOText(ja, 0.3f, true, ScrambleMode.All).SetEase(Ease.Linear);
         textEn.DOText(en, 0.3f, true, ScrambleMode.All).SetEase(Ease.Linear);
     }
-    private void SetGridEffect(float from, float to)
+    private void SetGridLocate(float from, float to)
     {
         var pos = transform.localPosition;
         pos.z = from;
