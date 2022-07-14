@@ -9,11 +9,11 @@ public class EnemyData : ScriptableObject
     [SerializeField] float mp = default;
     [SerializeField] string enemyName = default;
     [SerializeField, TextArea] string explain = default;
-    [SerializeField] List<Magic> magicList = default;
+    [SerializeField] List<DataVisual> visualList = default;
 
     public float HP => hp;
     public float MP => mp;
     public string EnemyName => enemyName;
     public string Explain => explain;
-    public List<Magic> MagicList => magicList;
+    public List<DataVisual> VisualList => visualList;
 }
