@@ -26,6 +26,7 @@ public class ActorInput : MonoBehaviour
     }
 
 
+    public enum VivrateHand { Holding, Left, Right, Both, }
     public Transform StaffHoldAncher => staffHandAncher;
     public bool IsTrigger(bool inverse = false)
     {
@@ -61,11 +62,42 @@ public class ActorInput : MonoBehaviour
         staffHoldController = Utility.GetEnableOVRController(staffHoldingHand);
         staffHoldInverseController = Utility.GetEnableOVRController(staffHoldingHand, true);
     }
+    public void OnVivration(float time, VivrateHand vivrate)
+    {
+        StartCoroutine(Vivration(time, vivrate));
+    }
 
 
     private OVRInput.Controller GetController(bool inverse)
     {
         var controller = inverse ? staffHoldInverseController : staffHoldController;
         return controller;
+    }
+    private OVRInput.Controller GetVivrateController(VivrateHand vivrate)
+    {
+        if (vivrate == VivrateHand.Holding) return GetController(false);
+        if (vivrate == VivrateHand.Left) return OVRInput.Controller.LTouch;
+        if (vivrate == VivrateHand.Right) return OVRInput.Controller.RTouch;
+        return default;
+    }
+    private IEnumerator Vivration(float time, VivrateHand vivrate)
+    {
+        if (vivrate == VivrateHand.Both)
+        {
+            OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
+            OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+            yield return new WaitForSeconds(time);
+
+            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        }
+        else
+        {
+            var controller = GetVivrateController(vivrate);
+            OVRInput.SetControllerVibration(1, 1, controller);
+            yield return new WaitForSeconds(time);
+
+            OVRInput.SetControllerVibration(0, 0, controller);
+        }
     }
 }

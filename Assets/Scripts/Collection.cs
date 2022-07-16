@@ -50,7 +50,10 @@ namespace Controller
 //------------------------------------------
 // インターフェイス
 //------------------------------------------
-
+public interface IApplyDamage
+{
+	void ApplyDamage(float damage);
+}
 
 //------------------------------------------
 // 列挙
@@ -92,8 +95,39 @@ namespace MagicContext
 			if (attribute == ((int)MagicAttribute.None)) return "無属性";
 			return "";
 		}
-
     }
+
+	[System.Serializable]
+	public class GradiantSet
+    {
+		[System.Serializable]
+		class GradWithKey
+		{
+			[SerializeField] Gradient gradient = default;
+			[SerializeField] MagicAttribute attribute = default;
+
+			public Gradient Gradient => gradient;
+			public MagicAttribute Attribute => attribute;
+		}
+		[SerializeField] List<GradWithKey> gradsList = default;
+
+
+		public Gradient GetGradient(MagicAttribute attribute)
+		{
+			foreach (var el in gradsList)
+			{
+				if (el.Attribute == attribute)
+				{
+					return el.Gradient;
+				}
+			}
+			return null;
+		}
+	}
+}
+public enum HandType
+{
+	LeftHand, RightHand,
 }
 
 

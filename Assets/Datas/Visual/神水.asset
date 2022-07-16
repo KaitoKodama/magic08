@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c958101872e6e4b982996df3f09b24, type: 3}
+  m_Name: "\u795E\u6C34"
+  m_EditorClassIdentifier: 
+  nameJa: "\u795E\u6C34"
+  nameEn: The Water
+  prefab: {fileID: -1500569646990916711, guid: b606621ee9d0b1d41b2f4cc4035f82d0, type: 3}
+  requireMP: 50
+  explain: "\u5168\u3066\u3092\u6D41\u3059\u3053\u3068\u304C\u53EF\u80FD\u3002"
+  grade: 2
+  attribute: 1
+  edit: 0

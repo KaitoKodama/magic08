@@ -5,11 +5,7 @@ using CMN;
 
 public class ActorCalibrator : MonoBehaviour
 {
-    [SerializeField] Transform trackAvatar = default;
-    [SerializeField] Transform trackingSpace = default;
-
     private OVRPlayerController controller;
-
     private float[] rotates = new float[] { 5f, 22.5f, 45f, 90f, };
     private int rotateIndex = 2;
 

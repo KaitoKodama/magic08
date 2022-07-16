@@ -18,36 +18,28 @@ public class Staff : MonoBehaviour
 
     private void Awake()
     {
-        var actor = GameObject.FindWithTag("Actor").GetComponent<Actor>();
-        actor.OnStaffHolingNotifyerHandler += OnGrabState;
-        actor.OnMagicShootHandler += OnMagicShoot;
-
         animator = GetComponentInChildren<Animator>();
         OnGrabState(false);
     }
 
 
     public bool IsShootEnable { get { return magicSelecter.IsResisterExist; } }
-
-
-    //デリゲートイベント通知
     public void OnMagicShoot(bool enable)
     {
         if (enable)
         {
             animator.SetTrigger(IsShootHash);
-            magicSelecter.RequestExcute(tips);
+            magicSelecter.RequestExcute(tips.forward);
         }
         else
         {
             magicSelecter.RequestSwapGridContent(tips);
         }
     }
-    public void OnGrabState(bool isGrab)
+    public void OnGrabState(bool isGrab, Transform hand = null)
     {
-        var expectform = isGrab ? Locator<ActorInput>.I.StaffHoldAncher : null;
-        staffSelf.parent = expectform;
-        if (expectform != null)
+        staffSelf.parent = hand;
+        if (hand != null)
         {
             staffSelf.localPosition = Vector3.zero;
             staffSelf.localRotation = Quaternion.Euler(Vector3.zero);

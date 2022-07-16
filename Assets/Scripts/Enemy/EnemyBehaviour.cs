@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehaviour : MonoBehaviour
+public class EnemyBehaviour : StateMachineBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private Enemy enemy;
+	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+		if (enemy == null)
+		{
+			enemy = animator.transform.GetComponent<Enemy>();
+		}
+		enemy.OnStateExit();
+	}
 }

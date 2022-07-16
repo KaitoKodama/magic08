@@ -4,7 +4,7 @@ using UnityEngine;
 using CMN;
 using State = StateMachine<Actor>.State;
 
-public class Actor : MonoBehaviour
+public class Actor : MonoBehaviour, IApplyDamage
 {
     [SerializeField] Staff staff = default;
     [SerializeField] float moveSpeed = 1f;
@@ -39,15 +39,6 @@ public class Actor : MonoBehaviour
 
 
     //------------------------------------------
-    // äOïîã§óLä÷êî
-    //------------------------------------------
-    public delegate void OnStaffHolingNotifyer(bool isHolding);
-    public delegate void OnMagicShoot(bool enable);
-    public event OnStaffHolingNotifyer OnStaffHolingNotifyerHandler;
-    public event OnMagicShoot OnMagicShootHandler;
-
-
-    //------------------------------------------
     // ì‡ïîã§óLä÷êî
     //------------------------------------------
     private void UpdateStaffLocater()
@@ -59,7 +50,7 @@ public class Actor : MonoBehaviour
         {
             if (!isStaffHolding)
             {
-                OnStaffHolingNotifyerHandler?.Invoke(true);
+                staff.OnGrabState(true, input.StaffHoldAncher);
                 isStaffHolding = true;
             }
         }
@@ -67,7 +58,7 @@ public class Actor : MonoBehaviour
         {
             if (isStaffHolding)
             {
-                OnStaffHolingNotifyerHandler?.Invoke(false);
+                staff.OnGrabState(false);
                 isStaffHolding = false;
             }
         }
@@ -80,13 +71,14 @@ public class Actor : MonoBehaviour
             var input = Locator<ActorInput>.I;
             if (input.IsTrigger(true))
             {
-                OnMagicShootHandler?.Invoke(false);
+                staff.OnMagicShoot(false);
             }
             if (exist)
             {
                 if (input.IsIndex(true))
                 {
-                    OnMagicShootHandler?.Invoke(true);
+                    staff.OnMagicShoot(true);
+                    input.OnVivration(0.1f, ActorInput.VivrateHand.Holding);
                 }
             }
         }
@@ -94,9 +86,14 @@ public class Actor : MonoBehaviour
         {
             if (exist)
             {
-                OnMagicShootHandler?.Invoke(true);
+                staff.OnMagicShoot(true);
             }
         }
+    }
+
+    public void ApplyDamage(float damage)
+    {
+        Debug.Log("Damaged" + damage);
     }
 
 

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent), typeof(Animator), typeof(FootSlide))]
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IApplyDamage
 {
     [SerializeField]
     protected EnemyData data = default;
@@ -12,32 +12,47 @@ public class Enemy : MonoBehaviour
     protected NavMeshAgent agent;
     protected Animator animator;
     protected float hp, mp;
+    protected int attackInedx;
 
-    private readonly int HorizontalHash = Animator.StringToHash("Horizontal");
-    private readonly int VerticalHash = Animator.StringToHash("Vertical");
+    private readonly int DirectionXHash = Animator.StringToHash("DirectionX");
+    private readonly int DirectionZHash = Animator.StringToHash("DirectionZ");
 
     private FootSlide footSlide;
     private Magic activeMagic;
+    private Vector3 lastPosition;
+    private bool refilling = false;
 
 
     //------------------------------------------
     // Unityランタイム
     //------------------------------------------
-    private void Awake()
+    private void Start()
+    {
+        VirtualStart();
+    }
+    private void Update()
+    {
+        VirtualUpdate();
+    }
+    protected virtual void VirtualStart()
     {
         actorform = GameObject.FindGameObjectWithTag("Actor").transform;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         footSlide = GetComponent<FootSlide>();
 
-        if (data != null)
+        hp = data.MaxHP;
+        mp = data.MaxMP;
+    }
+    protected virtual void VirtualUpdate()
+    {
+        if (refilling)
         {
-            hp = data.HP;
-            mp = data.MP;
-        }
-        else
-        {
-            Debug.LogError("データを格納してください");
+            mp = Mathf.Clamp(mp + (data.RefillSpeed * Time.deltaTime), 0, data.MaxMP);
+            if (mp >= data.MaxMP)
+            {
+                refilling = false;
+            }
         }
     }
 
@@ -48,7 +63,7 @@ public class Enemy : MonoBehaviour
     public delegate void OnDeathNotifyer();
     public OnDeathNotifyer OnDeathNotifyerHandler;
     public bool IsDeath { get; private set; } = false;
-    public virtual void OnAttackStateExit() { }
+    public virtual void OnStateExit() { }
     public virtual void ApplyDamage(float damage)
     {
         if (!IsDeath)
@@ -67,6 +82,7 @@ public class Enemy : MonoBehaviour
     //------------------------------------------
     // 継承先共有関数
     //------------------------------------------
+    protected bool IsEnableAttack { get { return (mp > 0 && !refilling); } }
     protected bool IsInDestination(float radius = 0.01f)
     {
         if (agent != null)
@@ -109,45 +125,63 @@ public class Enemy : MonoBehaviour
             transform.LookAt(look, Vector3.up);
         }
     }
-    protected void UpdateLocomotion(float lerp = 1f)
+    protected void UpdateLocomotion()
     {
-        var dir = (agent.destination - transform.position);
-        var axis = Vector3.Cross(transform.forward, dir);
-        var angle = Vector3.Angle(transform.forward, dir) * (axis.y < 0 ? -1 : 1);
-        var vec = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.forward;
+        var current = transform.position;
+        var dir = lastPosition - current;
+        var local = transform.InverseTransformVector(dir);
+        var local3D = local / Time.deltaTime;
 
-        float currntX = animator.GetFloat(HorizontalHash);
-        float currntZ = animator.GetFloat(VerticalHash);
-        float smoothX = Mathf.Lerp(currntX, vec.x, Time.deltaTime * lerp);
-        float smoothZ = Mathf.Lerp(currntZ, vec.z, Time.deltaTime * lerp);
-
+        animator.SetFloat(DirectionXHash, local3D.x);
+        animator.SetFloat(DirectionZHash, local3D.z);
         footSlide.SetFootSpeed(agent.velocity);
-        animator.SetFloat(HorizontalHash, smoothX);
-        animator.SetFloat(VerticalHash, smoothZ);
-    }
 
+        lastPosition = current;
+    }
+    protected void SetVHHashToOneDirection()
+    {
+        float currentX = animator.GetFloat(DirectionXHash);
+        float currentZ = animator.GetFloat(DirectionZHash);
+
+        if (currentX > currentZ)
+        {
+            animator.SetFloat(DirectionXHash, Mathf.Abs(currentX));
+            animator.SetFloat(DirectionZHash, 0);
+        }
+        else
+        {
+            animator.SetFloat(DirectionZHash, Mathf.Abs(currentZ));
+            animator.SetFloat(DirectionXHash, 0);
+        }
+    }
 
     protected void OnGenerateMagic(Transform origin)
     {
         if (activeMagic == null)
         {
-            var visual = GetRandomVisualData();
+            var visual = GetRandomVisualset();
             if (visual != null)
             {
+                mp -= visual.RequireMP;
                 var obj = Instantiate(visual.Prefab, origin.position, Quaternion.identity);
                 var magic = obj.GetComponent<Magic>();
                 magic.OnGenerate(visual, origin);
                 activeMagic = magic;
+
+                if (mp <= 0)
+                {
+                    refilling = true;
+                }
             }
         }
     }
-    protected void OnExcuteMagic(Transform origin, Transform expect)
+    protected void OnExcuteMagic(Transform origin, Vector3 expect)
     {
         if (activeMagic == null)
         {
             OnGenerateMagic(origin);
         }
-        activeMagic.OnExcute(expect);
+        activeMagic?.OnExcute(expect);
         activeMagic = null;
     }
 
@@ -155,7 +189,7 @@ public class Enemy : MonoBehaviour
     //------------------------------------------
     // 内部共有関数
     //------------------------------------------
-    private DataVisual GetRandomVisualData()
+    private DataVisual GetRandomVisualset()
     {
         int index = Random.Range(0, data.VisualList.Count - 1);
         if (data.VisualList[index].RequireMP >= mp)

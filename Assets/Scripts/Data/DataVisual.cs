@@ -6,21 +6,20 @@ using MagicContext;
 public class DataVisual : MagicData
 {
     [SerializeField] Magic prefab = default;
-    [SerializeField] int id = default;
     [SerializeField] float requireMP = default;
     [SerializeField] string explain = default;
     [SerializeField] MagicGrade grade = default;
     [SerializeField] MagicAttribute attribute = default;
+    [SerializeField] bool edit = false;
 
     public Magic Prefab => prefab;
-    public int ID => id;
     public float RequireMP => requireMP;
     public string Explain => explain;
     public MagicGrade Grade => grade;
     public MagicAttribute Attribute => attribute;
 
     public void SetVisualStatement(string nameJa, string nameEn, float requireMP, string explain, 
-        MagicGrade grade, MagicAttribute attribute, int id)
+        MagicGrade grade, MagicAttribute attribute)
     {
         this.nameJa = nameJa;
         this.nameEn = nameEn;
@@ -28,6 +27,5 @@ public class DataVisual : MagicData
         this.explain = explain;
         this.grade = grade;
         this.attribute = attribute;
-        this.id = id;
     }
 }

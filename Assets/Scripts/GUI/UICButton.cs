@@ -9,7 +9,6 @@ using DG.Tweening;
 public class UICButton : MonoBehaviour
 {
     [SerializeField] float fillSpeed = 2f;
-    [SerializeField, HideInInspector] string triggerTag = default;
     private Image image;
     private Action callback;
     private bool isEntry = false;
@@ -21,14 +20,18 @@ public class UICButton : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag(triggerTag) && !isEntry && IsEnable)
+        var hand = other.GetComponent<ActorHand>();
+        if (hand != null && !isEntry && IsEnable)
         {
             if (callback != null)
             {
                 if (image.fillAmount >= 1f)
                 {
-                    callback();
                     isEntry = true;
+
+                    callback();
+                    ActorInput.VivrateHand vivrate = (hand.HandType == HandType.LeftHand) ? ActorInput.VivrateHand.Left : ActorInput.VivrateHand.Right;
+                    Locator<ActorInput>.I.OnVivration(0.1f, vivrate);
                 }
                 else
                 {
@@ -43,7 +46,8 @@ public class UICButton : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(triggerTag))
+        var hand = other.GetComponent<ActorHand>();
+        if (hand != null)
         {
             image.fillAmount = 0f;
             isEntry = false;

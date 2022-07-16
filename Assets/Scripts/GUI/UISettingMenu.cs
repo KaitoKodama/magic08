@@ -28,7 +28,7 @@ public class UISettingMenu : MonoBehaviour
         {
             if (enable)
             {
-                panelRect.DOAnchorPosX(10.4549f, 0.2f).OnComplete(() =>
+                panelRect.DOAnchorPosX(11.34f, 0.2f).OnComplete(() =>
                 {
                     prev.IsEnable = true;
                     next.IsEnable = true;

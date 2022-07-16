@@ -47,7 +47,7 @@ public class MagicSelecter : MonoBehaviour
     {
         this.currentData = data;
     }
-    public void RequestExcute(Transform origin)
+    public void RequestExcute(Vector3 origin)
     {
         resisterList[0].OnExcute(origin);
         resisterList.Clear();

@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MagicContext;
 
 public class MagicBullet : Magic
 {
+    [SerializeField] ParticleSystem core = default;
+    [SerializeField] ParticleSystem ring = default;
+    [SerializeField] GradiantSet gradiantSet = default;
+
     private Transform trackTarget;
-    private float trackSpeed = 3f;
-    private float forceSpeed = 15f;
-    private float destroyTime = 10f;
     private bool isExcute = false;
 
 
@@ -15,9 +17,12 @@ public class MagicBullet : Magic
     {
         if (!isExcute)
         {
-            var lerp = Vector3.Lerp(transform.position, trackTarget.position, Time.deltaTime * trackSpeed);
-            transform.position = lerp;
+            OnChaseToTarget(trackTarget);
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        OnApplyDamage(other.gameObject, 10);
     }
 
 
@@ -26,12 +31,16 @@ public class MagicBullet : Magic
         this.data = data;
         trackTarget = origin;
         transform.position = origin.position;
+
+        var co = core.colorOverLifetime;
+        var ri = ring.colorOverLifetime;
+        var grad = gradiantSet.GetGradient(data.Attribute);
+        co.color = grad;
+        ri.color = grad;
     }
-    public override void OnExcute(Transform expect)
+    public override void OnExcute(Vector3 expect)
     {
         isExcute = true;
-        var rigid = GetComponent<Rigidbody>();
-        rigid.velocity = expect.forward * forceSpeed;
-        Destroy(this.gameObject, destroyTime);
+        OnForceToRigidWithLifeTime(expect);
     }
 }

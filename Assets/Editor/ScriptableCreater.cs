@@ -131,12 +131,11 @@ public class ItemDataCreateWindow : ScriptableObjectCreater<DataVisual>
     {
         var grade = Utility.GetIntToEnum<MagicGrade>(int.Parse(dataQueue.Dequeue()));
         var atribute = Utility.GetIntToEnum<MagicAttribute>(int.Parse(dataQueue.Dequeue()));
-        var id = int.Parse(dataQueue.Dequeue());
         var ja = dataQueue.Dequeue();
         var en = dataQueue.Dequeue();
         var mp = int.Parse(dataQueue.Dequeue());
         var exp = dataQueue.Dequeue();
 
-        data.SetVisualStatement(ja, en, mp, exp, grade, atribute, id);
+        data.SetVisualStatement(ja, en, mp, exp, grade, atribute);
     }
 }
