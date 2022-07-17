@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u8D64\u8272\u7403"
   nameEn: Luminous
   prefab: {fileID: -1500569646990916711, guid: b606621ee9d0b1d41b2f4cc4035f82d0, type: 3}
+  value: 7.5
   requireMP: 5
   explain: "\u81EA\u8EAB\u306E\u5468\u56F2\u3092\u7167\u3089\u3059\u65E5\u66DC\u9B54\u6CD5\u3002\u6697\u3044\u6D1E\u7A9F\u306A\u3069\u3067\u52B9\u679C\u7684"
   grade: 0

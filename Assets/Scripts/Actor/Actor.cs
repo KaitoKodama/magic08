@@ -1,115 +1,102 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CMN;
-using State = StateMachine<Actor>.State;
 
-public class Actor : MonoBehaviour, IApplyDamage
+public abstract class Actor : MonoBehaviour, IApplyDamage
 {
-    [SerializeField] Staff staff = default;
-    [SerializeField] float moveSpeed = 1f;
-
-    private OVRPlayerController playerController;
-    private StateMachine<Actor> stateMachine;
-
-    private bool isStaffHolding = false;
+    [SerializeField] 
+    protected ActorData data = default;
+    protected float hp, mp;
+    private bool refilling = false;
 
 
     //------------------------------------------
-    // Unity�����^�C��
+    // Unityランタイム
     //------------------------------------------
-    private void Awake()
+    protected void Start()
     {
-        playerController = GetComponent<OVRPlayerController>();
-        playerController.SetMoveScaleMultiplier(moveSpeed);
+        hp = data.MaxHP;
+        mp = data.MaxMP;
     }
-    void Start()
+    protected void Update()
     {
-        stateMachine = new StateMachine<Actor>(this);
-        stateMachine.Start<StateNormal>();
-    }
-    void Update()
-    {
-        stateMachine.Update();
-    }
-    private void FixedUpdate()
-    {
-        stateMachine.FixedUpdate();
-    }
-
-
-    //------------------------------------------
-    // �������L�֐�
-    //------------------------------------------
-    private void UpdateStaffLocater()
-    {
-        var input = Locator<ActorInput>.I;
-        float gripAmount = input.GetIndex() + input.GetTrigger();
-        float gripAmountRequire = 1.5f;
-        if (gripAmount >= gripAmountRequire)
+        if (refilling)
         {
-            if (!isStaffHolding)
+            mp = Mathf.Clamp(mp + (data.RefillSpeed * Time.deltaTime), 0, data.MaxMP);
+            if (mp >= data.MaxMP)
             {
-                staff.OnGrabState(true, input.StaffHoldAncher);
-                isStaffHolding = true;
-            }
-        }
-        else
-        {
-            if (isStaffHolding)
-            {
-                staff.OnGrabState(false);
-                isStaffHolding = false;
-            }
-        }
-    }
-    private void UpdateSelecterRequest()
-    {
-        bool exist = staff.IsShootEnable;
-        if (isStaffHolding)
-        {
-            var input = Locator<ActorInput>.I;
-            if (input.IsTrigger(true))
-            {
-                staff.OnMagicShoot(false);
-            }
-            if (exist)
-            {
-                if (input.IsIndex(true))
-                {
-                    staff.OnMagicShoot(true);
-                    input.OnVivration(0.1f, ActorInput.VivrateHand.Holding);
-                }
-            }
-        }
-        else
-        {
-            if (exist)
-            {
-                staff.OnMagicShoot(true);
+                refilling = false;
             }
         }
     }
 
-    public void ApplyDamage(float damage)
-    {
-        Debug.Log("Damaged" + damage);
-    }
+
+    //------------------------------------------
+    // 外部共有関数
+    //------------------------------------------
+    public Magic EnableMagic { get; private set; }
+    public ActorData ActorData { get; private set; }
 
 
     //------------------------------------------
-    // �X�e�[�g�}�V��
+    // 継承先共有抽象関数
     //------------------------------------------
-    enum Event
+    protected abstract void OnApplyDamage(float damage);
+
+
+    //------------------------------------------
+    // 継承先・外部共有インターフェイス
+    //------------------------------------------
+    public virtual void ApplyDamage(Magic self, CharacterType character, float damage)
     {
-        BeginNormal
-    }
-    private class StateNormal : State
-    {
-        protected override void OnUpdate()
+        if (character != data.CharacterType)
         {
-            owner.UpdateStaffLocater();
-            owner.UpdateSelecterRequest();
+            self.DoDestroy();
+            OnApplyDamage(damage);
         }
+    }
+
+
+    //------------------------------------------
+    // デリゲート
+    //------------------------------------------
+    public delegate void OnDeathNotifyer();
+    public OnDeathNotifyer OnDeathNotifyerHandler;
+
+
+    //------------------------------------------
+    // 継承先共有関数 - 戻り値あり
+    //------------------------------------------
+    protected bool IsEnableAttack { get { return (mp > 0 && !refilling); } }
+
+
+    //------------------------------------------
+    // 継承先共有関数 - 戻り値なし
+    //------------------------------------------
+    protected void GenerateFromVisual(CharacterType character, Transform origin, DataVisual visual)
+    {
+        if (EnableMagic == null)
+        {
+            mp -= visual.RequireMP;
+            var obj = Instantiate(visual.Prefab, origin.position, Quaternion.identity);
+            var magic = obj.GetComponent<Magic>();
+            magic.OnGenerate(character, visual, origin);
+            EnableMagic = magic;
+            if (mp <= 0) refilling = true;
+        }
+    }
+    protected void ExcuteOrGenerateFromVisual(Transform origin, DataVisual visual, Vector3 expect)
+    {
+        if (EnableMagic == null)
+        {
+            GenerateFromVisual(data.CharacterType, origin, visual);
+        }
+        EnableMagic?.OnExcute(expect);
+        EnableMagic = null;
+    }
+    protected void TryExcuteMagic(Vector3 expect)
+    {
+        EnableMagic?.OnExcute(expect);
+        EnableMagic = null;
     }
 }

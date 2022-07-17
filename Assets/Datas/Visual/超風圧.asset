@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u8D85\u98A8\u5727"
   nameEn: High Air Press
   prefab: {fileID: -1500569646990916711, guid: b606621ee9d0b1d41b2f4cc4035f82d0, type: 3}
+  value: 67.5
   requireMP: 45
   explain: "\u76F8\u624B\u306B\u8D85\u5F37\u529B\u306A\u5727\u529B\u3092\u304B\u3051\u308B\u3002"
   grade: 2

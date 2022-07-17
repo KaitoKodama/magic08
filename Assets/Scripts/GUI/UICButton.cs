@@ -20,7 +20,7 @@ public class UICButton : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        var hand = other.GetComponent<ActorHand>();
+        var hand = other.GetComponent<PlayerHand>();
         if (hand != null && !isEntry && IsEnable)
         {
             if (callback != null)
@@ -30,8 +30,8 @@ public class UICButton : MonoBehaviour
                     isEntry = true;
 
                     callback();
-                    ActorInput.VivrateHand vivrate = (hand.HandType == HandType.LeftHand) ? ActorInput.VivrateHand.Left : ActorInput.VivrateHand.Right;
-                    Locator<ActorInput>.I.OnVivration(0.1f, vivrate);
+                    PlayerInput.VivrateHand vivrate = (hand.HandType == HandType.LeftHand) ? PlayerInput.VivrateHand.Left : PlayerInput.VivrateHand.Right;
+                    Locator<PlayerInput>.I.OnVivration(0.1f, vivrate);
                 }
                 else
                 {
@@ -46,7 +46,7 @@ public class UICButton : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        var hand = other.GetComponent<ActorHand>();
+        var hand = other.GetComponent<PlayerHand>();
         if (hand != null)
         {
             image.fillAmount = 0f;

@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - EnableSelecter
-  - Actor
   - Pinch
+  - Field
   layers:
   - Default
   - TransparentFX

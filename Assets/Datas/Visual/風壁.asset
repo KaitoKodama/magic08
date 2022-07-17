@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u98A8\u58C1"
   nameEn: Wind Wall
   prefab: {fileID: -1500569646990916711, guid: b606621ee9d0b1d41b2f4cc4035f82d0, type: 3}
+  value: 15
   requireMP: 10
   explain: "\u98A8\u306E\u58C1\u3092\u4F5C\u308A\u3001\u6575\u306E\u653B\u6483\u3092\u9632\u3050\u3002"
   grade: 0

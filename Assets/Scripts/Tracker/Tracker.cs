@@ -16,54 +16,72 @@ public class Tracker
     public enum VecOp { X, Y, Z }
     public void UpdatePosition()
     {
-        var pos = trackTarget.position;
-        pos.x += positionOffset.x;
-        pos.y += positionOffset.y;
-        pos.z += positionOffset.z;
-        this.tracker.position = Vector3.Lerp(tracker.position, pos, Time.deltaTime * positionSpeed);
+        if (trackTarget != null)
+        {
+            var pos = trackTarget.position;
+            pos.x += positionOffset.x;
+            pos.y += positionOffset.y;
+            pos.z += positionOffset.z;
+            this.tracker.position = Vector3.Lerp(tracker.position, pos, Time.deltaTime * positionSpeed);
+        }
     }
     public void UpdateRotation()
     {
-        var euler = trackTarget.rotation.eulerAngles;
-        euler.x += rotateOffset.x;
-        euler.y += rotateOffset.y;
-        euler.z += rotateOffset.z;
-        var rot = Quaternion.Euler(euler);
-        this.tracker.rotation = Quaternion.Lerp(tracker.rotation, rot, Time.deltaTime * rotateSpeed);
+        if (trackTarget != null)
+        {
+            var euler = trackTarget.rotation.eulerAngles;
+            euler.x += rotateOffset.x;
+            euler.y += rotateOffset.y;
+            euler.z += rotateOffset.z;
+            var rot = Quaternion.Euler(euler);
+            this.tracker.rotation = Quaternion.Lerp(tracker.rotation, rot, Time.deltaTime * rotateSpeed);
+        }
     }
     public void UpdateRotation(VecOp op, float scale = 1f)
     {
-        var euler = trackTarget.rotation.eulerAngles;
-        euler.x += rotateOffset.x;
-        euler.y += rotateOffset.y;
-        euler.z += rotateOffset.z;
+        if (trackTarget != null)
+        {
+            var euler = trackTarget.rotation.eulerAngles;
+            euler.x += rotateOffset.x;
+            euler.y += rotateOffset.y;
+            euler.z += rotateOffset.z;
 
-        if (op == VecOp.X) euler.x *= scale;
-        if (op == VecOp.Y) euler.y *= scale;
-        if (op == VecOp.Z) euler.z *= scale;
+            if (op == VecOp.X) euler.x *= scale;
+            if (op == VecOp.Y) euler.y *= scale;
+            if (op == VecOp.Z) euler.z *= scale;
 
-        var rot = Quaternion.Euler(euler);
-        this.tracker.rotation = Quaternion.Lerp(tracker.rotation, rot, Time.deltaTime * rotateSpeed);
+            var rot = Quaternion.Euler(euler);
+            this.tracker.rotation = Quaternion.Lerp(tracker.rotation, rot, Time.deltaTime * rotateSpeed);
+        }
     }
     public void UpdateFixRotation(VecOp op, float expect = 0f)
     {
-        var vec = trackTarget.rotation.eulerAngles;
-        var lerp = Quaternion.Lerp(tracker.rotation, Quaternion.Euler(vec), Time.deltaTime * rotateSpeed);
+        if (trackTarget != null)
+        {
+            var vec = trackTarget.rotation.eulerAngles;
+            var lerp = Quaternion.Lerp(tracker.rotation, Quaternion.Euler(vec), Time.deltaTime * rotateSpeed);
         
-        var euler = lerp.eulerAngles;
-        if (op == VecOp.X) euler.x = expect;
-        if (op == VecOp.Y) euler.y = expect;
-        if (op == VecOp.Z) euler.z = expect;
+            var euler = lerp.eulerAngles;
+            if (op == VecOp.X) euler.x = expect;
+            if (op == VecOp.Y) euler.y = expect;
+            if (op == VecOp.Z) euler.z = expect;
 
-        this.tracker.rotation = Quaternion.Euler(euler);
+            this.tracker.rotation = Quaternion.Euler(euler);
+        }
     }
 
     public void ResetPosition()
     {
-        this.tracker.position = trackTarget.position;
+        if (trackTarget != null)
+        {
+            this.tracker.position = trackTarget.position;
+        }
     }
     public void ResetRotation()
     {
-        this.tracker.rotation = trackTarget.rotation;
+        if (trackTarget != null)
+        {
+            this.tracker.rotation = trackTarget.rotation;
+        }
     }
 }

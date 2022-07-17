@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u7652\u3057\u306E\u5149"
   nameEn: Healing Light
   prefab: {fileID: -1500569646990916711, guid: b606621ee9d0b1d41b2f4cc4035f82d0, type: 3}
+  value: 15
   requireMP: 10
   explain: "\u307E\u3070\u3086\u3044\u5149\u3067\u81EA\u8EAB\u306E\u4F53\u529B\u3092\u56DE\u5FA9\u3059\u308B\u3002"
   grade: 0

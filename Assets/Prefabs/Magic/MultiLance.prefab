@@ -43112,6 +43112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83bace9bc93e1b47b59fb70e24c85fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakEffect: {fileID: 4416668272308362415, guid: 1490326f33b2cfb47bbfc5839ecb5856,
+    type: 3}
   multiParent: {fileID: 3309293919433508230}
   triggers:
   - {fileID: 3309293918241630612}

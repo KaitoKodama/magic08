@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 134536172506684332}
   m_Layer: 0
   m_Name: Bld_Temple_Int_Column_A (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 827883517058994593}
   m_Layer: 0
   m_Name: Bld_Temple_Int_Column_A (5)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 847320808993794930}
   m_Layer: 9
   m_Name: Bld_Temple_Int_Column_Transition_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 869151632336363200}
   m_Layer: 0
   m_Name: Bld_Temple_Int_Column_A (4)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 1139399639038284920}
   m_Layer: 9
   m_Name: Struct_Stairs_B
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -482,7 +482,7 @@ GameObject:
   - component: {fileID: 1754279637293909154}
   m_Layer: 0
   m_Name: Struct_Curb_A (464)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 1796013726371268256}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (23)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 1732384950151754216}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 1732384950155121003}
   m_Layer: 0
   m_Name: Struct_Curb_A (474)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -830,7 +830,7 @@ GameObject:
   - component: {fileID: 1732384950159844677}
   m_Layer: 0
   m_Name: Struct_Curb_A (472)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 1732384950164447007}
   m_Layer: 0
   m_Name: Struct_Curb_A (466)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -986,7 +986,7 @@ GameObject:
   - component: {fileID: 1732384950168277002}
   m_Layer: 0
   m_Name: Statue
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 1732384950170718872}
   m_Layer: 0
   m_Name: Struct_Curb_A (470)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1100,7 +1100,7 @@ GameObject:
   - component: {fileID: 1732384950173091383}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1193,7 +1193,7 @@ GameObject:
   - component: {fileID: 1732384950189223127}
   m_Layer: 0
   m_Name: Struct_Curb_A (463)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1272,7 +1272,7 @@ GameObject:
   - component: {fileID: 1732384950190753579}
   m_Layer: 0
   m_Name: Struct_Curb_A (481)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1351,7 +1351,7 @@ GameObject:
   - component: {fileID: 1732384950195308296}
   m_Layer: 0
   m_Name: Struct_Curb_A (475)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1431,7 +1431,7 @@ GameObject:
   - component: {fileID: 1732384950204534120}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1525,7 +1525,7 @@ GameObject:
   - component: {fileID: 1732384950205180025}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (24)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1618,7 +1618,7 @@ GameObject:
   - component: {fileID: 1732384950207642064}
   m_Layer: 0
   m_Name: Struct_Curb_A (474)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1697,7 +1697,7 @@ GameObject:
   - component: {fileID: 1732384950230893879}
   m_Layer: 0
   m_Name: Struct_Curb_A (480)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1776,7 +1776,7 @@ GameObject:
   - component: {fileID: 1732384950246230164}
   m_Layer: 0
   m_Name: Struct_Curb_A (471)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1856,7 +1856,7 @@ GameObject:
   - component: {fileID: 1732384950255724364}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (18)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1949,7 +1949,7 @@ GameObject:
   - component: {fileID: 1732384950274440518}
   m_Layer: 0
   m_Name: Struct_Curb_A (476)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2028,7 +2028,7 @@ GameObject:
   - component: {fileID: 1732384950277519322}
   m_Layer: 0
   m_Name: Struct_Curb_A (479)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2105,7 +2105,7 @@ GameObject:
   - component: {fileID: 1732384950283331484}
   m_Layer: 0
   m_Name: WallSingle
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2141,7 +2141,7 @@ GameObject:
   - component: {fileID: 1732384950284439222}
   m_Layer: 0
   m_Name: Struct_Curb_A (467)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2221,7 +2221,7 @@ GameObject:
   - component: {fileID: 1732384950285775207}
   m_Layer: 0
   m_Name: Struct_Fullwall_Cor_B (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2314,7 +2314,7 @@ GameObject:
   - component: {fileID: 1732384950287268646}
   m_Layer: 0
   m_Name: Struct_Curb_A (475)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2394,7 +2394,7 @@ GameObject:
   - component: {fileID: 1732384950289087267}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2489,7 +2489,7 @@ GameObject:
   - component: {fileID: 1732384950311807885}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (23)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2583,7 +2583,7 @@ GameObject:
   - component: {fileID: 1732384950320138378}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (22)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2676,7 +2676,7 @@ GameObject:
   - component: {fileID: 1732384950322660432}
   m_Layer: 0
   m_Name: Struct_Curb_A (465)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2756,7 +2756,7 @@ GameObject:
   - component: {fileID: 1732384950323523939}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (24)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2849,7 +2849,7 @@ GameObject:
   - component: {fileID: 1732384950336459222}
   m_Layer: 0
   m_Name: Struct_Curb_A (478)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2929,7 +2929,7 @@ GameObject:
   - component: {fileID: 1732384950338709445}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (24)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3022,7 +3022,7 @@ GameObject:
   - component: {fileID: 1732384950368800599}
   m_Layer: 0
   m_Name: Struct_Curb_A (476)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3101,7 +3101,7 @@ GameObject:
   - component: {fileID: 1732384950370389325}
   m_Layer: 0
   m_Name: Struct_Curb_A (481)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3180,7 +3180,7 @@ GameObject:
   - component: {fileID: 1732384950386146684}
   m_Layer: 0
   m_Name: Struct_Curb_A (463)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3259,7 +3259,7 @@ GameObject:
   - component: {fileID: 1732384950397638007}
   m_Layer: 0
   m_Name: Struct_Curb_A (480)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3339,7 +3339,7 @@ GameObject:
   - component: {fileID: 1732384950400902807}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3433,7 +3433,7 @@ GameObject:
   - component: {fileID: 1732384950440516677}
   m_Layer: 0
   m_Name: Struct_Curb_A (475)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3510,7 +3510,7 @@ GameObject:
   - component: {fileID: 1732384950445263068}
   m_Layer: 0
   m_Name: WallSingle
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3547,7 +3547,7 @@ GameObject:
   - component: {fileID: 1732384950461180750}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (64)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3641,7 +3641,7 @@ GameObject:
   - component: {fileID: 1732384950487327361}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (18)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3734,7 +3734,7 @@ GameObject:
   - component: {fileID: 1732384950490615559}
   m_Layer: 0
   m_Name: Struct_Curb_A (474)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3813,7 +3813,7 @@ GameObject:
   - component: {fileID: 1732384950494980148}
   m_Layer: 0
   m_Name: Struct_Curb_A (473)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3892,7 +3892,7 @@ GameObject:
   - component: {fileID: 1732384950499084537}
   m_Layer: 0
   m_Name: Struct_Curb_A (469)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3972,7 +3972,7 @@ GameObject:
   - component: {fileID: 1732384950500283904}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (64)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4065,7 +4065,7 @@ GameObject:
   - component: {fileID: 1732384950507326237}
   m_Layer: 0
   m_Name: Struct_Curb_A (476)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4144,7 +4144,7 @@ GameObject:
   - component: {fileID: 1732384950549569124}
   m_Layer: 0
   m_Name: Struct_Curb_A (469)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4223,7 +4223,7 @@ GameObject:
   - component: {fileID: 1732384950565875527}
   m_Layer: 0
   m_Name: Struct_Curb_A (464)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4303,7 +4303,7 @@ GameObject:
   - component: {fileID: 1732384950567403561}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (64)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4394,7 +4394,7 @@ GameObject:
   - component: {fileID: 1732384950568517554}
   m_Layer: 0
   m_Name: statue (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4429,7 +4429,7 @@ GameObject:
   - component: {fileID: 1732384950569574607}
   m_Layer: 0
   m_Name: Struct_Curb_A (481)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4509,7 +4509,7 @@ GameObject:
   - component: {fileID: 1732384950584929841}
   m_Layer: 0
   m_Name: Struct_Fullwall_Cor_B (5)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4602,7 +4602,7 @@ GameObject:
   - component: {fileID: 1732384950588668084}
   m_Layer: 0
   m_Name: Struct_Curb_A (482)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4679,7 +4679,7 @@ GameObject:
   - component: {fileID: 1732384950595928731}
   m_Layer: 0
   m_Name: FX
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4712,7 +4712,7 @@ GameObject:
   - component: {fileID: 1732384950596409782}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4806,7 +4806,7 @@ GameObject:
   - component: {fileID: 1732384950606581957}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (63)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4897,7 +4897,7 @@ GameObject:
   - component: {fileID: 1732384950612792696}
   m_Layer: 0
   m_Name: WallMultiple
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4933,7 +4933,7 @@ GameObject:
   - component: {fileID: 1732384950620677522}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5025,7 +5025,7 @@ GameObject:
   - component: {fileID: 1732384950642321393}
   m_Layer: 0
   m_Name: FX
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5057,7 +5057,7 @@ GameObject:
   - component: {fileID: 1732384950646910995}
   m_Layer: 0
   m_Name: Struct_Curb_A (471)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5136,7 +5136,7 @@ GameObject:
   - component: {fileID: 1732384950648740332}
   m_Layer: 0
   m_Name: Struct_Curb_A (467)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5215,7 +5215,7 @@ GameObject:
   - component: {fileID: 1732384950651134041}
   m_Layer: 0
   m_Name: Struct_Curb_A (466)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5294,7 +5294,7 @@ GameObject:
   - component: {fileID: 1732384950655027654}
   m_Layer: 0
   m_Name: Struct_Curb_A (477)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5373,7 +5373,7 @@ GameObject:
   - component: {fileID: 1732384950670235219}
   m_Layer: 0
   m_Name: Struct_Curb_A (465)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5453,7 +5453,7 @@ GameObject:
   - component: {fileID: 1732384950675039946}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5547,7 +5547,7 @@ GameObject:
   - component: {fileID: 1732384950687749801}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5642,7 +5642,7 @@ GameObject:
   - component: {fileID: 1732384950691267201}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (23)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5736,7 +5736,7 @@ GameObject:
   - component: {fileID: 1732384950693354815}
   m_Layer: 0
   m_Name: Struct_Fullwall_Cor_B (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5830,7 +5830,7 @@ GameObject:
   - component: {fileID: 1732384950698610161}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5923,7 +5923,7 @@ GameObject:
   - component: {fileID: 1732384950698887841}
   m_Layer: 0
   m_Name: Struct_Curb_A (479)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6003,7 +6003,7 @@ GameObject:
   - component: {fileID: 1732384950711515815}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (23)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6096,7 +6096,7 @@ GameObject:
   - component: {fileID: 1732384950726077724}
   m_Layer: 0
   m_Name: Struct_Curb_A (471)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6176,7 +6176,7 @@ GameObject:
   - component: {fileID: 1732384950751024679}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6271,7 +6271,7 @@ GameObject:
   - component: {fileID: 1732384950753318051}
   m_Layer: 0
   m_Name: Struct_Curb_A (471)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6350,7 +6350,7 @@ GameObject:
   - component: {fileID: 1732384950757273182}
   m_Layer: 0
   m_Name: Struct_Curb_A (473)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6429,7 +6429,7 @@ GameObject:
   - component: {fileID: 1732384950766272428}
   m_Layer: 0
   m_Name: Struct_Curb_A (468)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6509,7 +6509,7 @@ GameObject:
   - component: {fileID: 1732384950770221302}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (24)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6602,7 +6602,7 @@ GameObject:
   - component: {fileID: 1732384950792428862}
   m_Layer: 0
   m_Name: Struct_Curb_A (481)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6681,7 +6681,7 @@ GameObject:
   - component: {fileID: 1732384950802811212}
   m_Layer: 0
   m_Name: Struct_Curb_A (473)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6760,7 +6760,7 @@ GameObject:
   - component: {fileID: 1732384950803704261}
   m_Layer: 0
   m_Name: Struct_Curb_A (482)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6839,7 +6839,7 @@ GameObject:
   - component: {fileID: 1732384950815462374}
   m_Layer: 0
   m_Name: Struct_Curb_A (470)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6918,7 +6918,7 @@ GameObject:
   - component: {fileID: 1732384950819941028}
   m_Layer: 0
   m_Name: Struct_Curb_A (471)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6995,7 +6995,7 @@ GameObject:
   - component: {fileID: 1732384950829035402}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7054,7 +7054,7 @@ GameObject:
   - component: {fileID: 1732384950830712465}
   m_Layer: 0
   m_Name: Struct_Curb_A (475)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7133,7 +7133,7 @@ GameObject:
   - component: {fileID: 1732384950837837412}
   m_Layer: 0
   m_Name: Struct_Curb_A (470)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7213,7 +7213,7 @@ GameObject:
   - component: {fileID: 1732384950847260977}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7306,7 +7306,7 @@ GameObject:
   - component: {fileID: 1732384950847691229}
   m_Layer: 0
   m_Name: Struct_Curb_A (475)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7386,7 +7386,7 @@ GameObject:
   - component: {fileID: 1732384950858180349}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7479,7 +7479,7 @@ GameObject:
   - component: {fileID: 1732384950859678555}
   m_Layer: 0
   m_Name: Struct_Curb_A (466)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7558,7 +7558,7 @@ GameObject:
   - component: {fileID: 1732384950871234868}
   m_Layer: 0
   m_Name: Struct_Curb_A (465)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7637,7 +7637,7 @@ GameObject:
   - component: {fileID: 1732384950902065260}
   m_Layer: 0
   m_Name: Struct_Curb_A (479)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7716,7 +7716,7 @@ GameObject:
   - component: {fileID: 1732384950905183827}
   m_Layer: 0
   m_Name: Struct_Curb_A (470)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7795,7 +7795,7 @@ GameObject:
   - component: {fileID: 1732384950909180790}
   m_Layer: 0
   m_Name: Struct_Curb_A (472)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7875,7 +7875,7 @@ GameObject:
   - component: {fileID: 1732384950927330414}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (23)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7968,7 +7968,7 @@ GameObject:
   - component: {fileID: 1732384950937905555}
   m_Layer: 0
   m_Name: Struct_Curb_A (466)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8048,7 +8048,7 @@ GameObject:
   - component: {fileID: 1732384950939287436}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8139,7 +8139,7 @@ GameObject:
   - component: {fileID: 1732384950946516295}
   m_Layer: 0
   m_Name: Cover
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8176,7 +8176,7 @@ GameObject:
   - component: {fileID: 1732384950948811845}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (18)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8270,7 +8270,7 @@ GameObject:
   - component: {fileID: 1732384950954975821}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (24)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8364,7 +8364,7 @@ GameObject:
   - component: {fileID: 1732384950958070602}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (64)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8457,7 +8457,7 @@ GameObject:
   - component: {fileID: 1732384950958125513}
   m_Layer: 0
   m_Name: Struct_Curb_A (473)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8536,7 +8536,7 @@ GameObject:
   - component: {fileID: 1732384950966278873}
   m_Layer: 0
   m_Name: Struct_Curb_A (474)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8615,7 +8615,7 @@ GameObject:
   - component: {fileID: 1732384950978442105}
   m_Layer: 0
   m_Name: Struct_Curb_A (468)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8694,7 +8694,7 @@ GameObject:
   - component: {fileID: 1732384950978452297}
   m_Layer: 0
   m_Name: Struct_Curb_A (464)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8771,7 +8771,7 @@ GameObject:
   - component: {fileID: 1732384950984430404}
   m_Layer: 0
   m_Name: FX
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8804,7 +8804,7 @@ GameObject:
   - component: {fileID: 1732384950995587375}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (24)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8898,7 +8898,7 @@ GameObject:
   - component: {fileID: 1732384951010243177}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (63)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8991,7 +8991,7 @@ GameObject:
   - component: {fileID: 1732384951027424774}
   m_Layer: 0
   m_Name: Struct_Curb_A (469)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9070,7 +9070,7 @@ GameObject:
   - component: {fileID: 1732384951032437282}
   m_Layer: 0
   m_Name: Struct_Curb_A (472)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9150,7 +9150,7 @@ GameObject:
   - component: {fileID: 1732384951053227227}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (24)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9243,7 +9243,7 @@ GameObject:
   - component: {fileID: 1732384951056077129}
   m_Layer: 0
   m_Name: Struct_Curb_A (482)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9323,7 +9323,7 @@ GameObject:
   - component: {fileID: 1732384951060069409}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9447,7 +9447,7 @@ GameObject:
   - component: {fileID: 1732384951064386975}
   m_Layer: 0
   m_Name: Struct_Curb_A (472)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9527,7 +9527,7 @@ GameObject:
   - component: {fileID: 1732384951068511680}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9621,7 +9621,7 @@ GameObject:
   - component: {fileID: 1732384951075064012}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (18)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9714,7 +9714,7 @@ GameObject:
   - component: {fileID: 1732384951081331598}
   m_Layer: 0
   m_Name: Struct_Curb_A (479)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9793,7 +9793,7 @@ GameObject:
   - component: {fileID: 1732384951101150905}
   m_Layer: 0
   m_Name: Struct_Curb_A (476)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9872,7 +9872,7 @@ GameObject:
   - component: {fileID: 1732384951101843327}
   m_Layer: 0
   m_Name: Struct_Curb_A (469)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9951,7 +9951,7 @@ GameObject:
   - component: {fileID: 1732384951103762696}
   m_Layer: 0
   m_Name: Struct_Curb_A (473)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10028,7 +10028,7 @@ GameObject:
   - component: {fileID: 1732384951108459822}
   m_Layer: 0
   m_Name: RootStructs
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10064,7 +10064,7 @@ GameObject:
   - component: {fileID: 1732384951129672478}
   m_Layer: 0
   m_Name: Struct_Fullwall_Cor_B (3)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10158,7 +10158,7 @@ GameObject:
   - component: {fileID: 1732384951142863972}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (8)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10251,7 +10251,7 @@ GameObject:
   - component: {fileID: 1732384951145201976}
   m_Layer: 0
   m_Name: Struct_Curb_A (478)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10331,7 +10331,7 @@ GameObject:
   - component: {fileID: 1732384951149496356}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10424,7 +10424,7 @@ GameObject:
   - component: {fileID: 1732384951158543611}
   m_Layer: 0
   m_Name: Struct_Curb_A (479)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10504,7 +10504,7 @@ GameObject:
   - component: {fileID: 1732384951162382174}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10598,7 +10598,7 @@ GameObject:
   - component: {fileID: 1732384951170499441}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10692,7 +10692,7 @@ GameObject:
   - component: {fileID: 1732384951172074153}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (9)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10786,7 +10786,7 @@ GameObject:
   - component: {fileID: 1732384951184287282}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (6)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10880,7 +10880,7 @@ GameObject:
   - component: {fileID: 1732384951185430447}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11004,7 +11004,7 @@ GameObject:
   - component: {fileID: 1732384951210688859}
   m_Layer: 0
   m_Name: Struct_Curb_A (464)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11083,7 +11083,7 @@ GameObject:
   - component: {fileID: 1732384951210710715}
   m_Layer: 0
   m_Name: Struct_Curb_A (463)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11163,7 +11163,7 @@ GameObject:
   - component: {fileID: 1732384951223858257}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (23)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11256,7 +11256,7 @@ GameObject:
   - component: {fileID: 1732384951224683512}
   m_Layer: 0
   m_Name: Struct_Curb_A (465)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11335,7 +11335,7 @@ GameObject:
   - component: {fileID: 1732384951243509414}
   m_Layer: 0
   m_Name: Struct_Curb_A (480)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11414,7 +11414,7 @@ GameObject:
   - component: {fileID: 1732384951247535677}
   m_Layer: 0
   m_Name: Struct_Curb_A (482)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11494,7 +11494,7 @@ GameObject:
   - component: {fileID: 1732384951265891286}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11616,9 +11616,10 @@ GameObject:
   - component: {fileID: 1732384951270079556}
   - component: {fileID: 1732384951270079554}
   - component: {fileID: 1732384951270079555}
+  - component: {fileID: 1141469575013467980}
   m_Layer: 0
   m_Name: Statue
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11684,6 +11685,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1141469575013467980
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732384951270079557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 69.4271, y: 176.32423, z: 62.75767}
+  m_Center: {x: -2.0195432, y: -14.402374, z: 3.3746822}
 --- !u!1 &1732384951274142318
 GameObject:
   m_ObjectHideFlags: 0
@@ -11697,7 +11711,7 @@ GameObject:
   - component: {fileID: 1732384951274142316}
   m_Layer: 0
   m_Name: Struct_Curb_A (480)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11777,7 +11791,7 @@ GameObject:
   - component: {fileID: 1732384951277082988}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (22)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11870,7 +11884,7 @@ GameObject:
   - component: {fileID: 1732384951288504487}
   m_Layer: 0
   m_Name: Struct_Curb_A (468)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11950,7 +11964,7 @@ GameObject:
   - component: {fileID: 1732384951304218963}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (18)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12043,7 +12057,7 @@ GameObject:
   - component: {fileID: 1732384951313197909}
   m_Layer: 0
   m_Name: Struct_Curb_A (465)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12122,7 +12136,7 @@ GameObject:
   - component: {fileID: 1732384951325373600}
   m_Layer: 0
   m_Name: Struct_Curb_A (467)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12202,7 +12216,7 @@ GameObject:
   - component: {fileID: 1732384951328117121}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (22)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12296,7 +12310,7 @@ GameObject:
   - component: {fileID: 1732384951337504240}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (63)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12390,7 +12404,7 @@ GameObject:
   - component: {fileID: 1732384951361935922}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12483,7 +12497,7 @@ GameObject:
   - component: {fileID: 1732384951367986411}
   m_Layer: 0
   m_Name: Struct_Curb_A (480)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12562,7 +12576,7 @@ GameObject:
   - component: {fileID: 1732384951387076241}
   m_Layer: 0
   m_Name: Struct_Curb_A (478)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12642,7 +12656,7 @@ GameObject:
   - component: {fileID: 1732384951391168675}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12736,7 +12750,7 @@ GameObject:
   - component: {fileID: 1732384951401216933}
   m_Layer: 0
   m_Name: Struct_Curb_A (476)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12816,7 +12830,7 @@ GameObject:
   - component: {fileID: 1732384951413203243}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (18)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12909,7 +12923,7 @@ GameObject:
   - component: {fileID: 1732384951418953054}
   m_Layer: 0
   m_Name: Struct_Curb_A (474)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12989,7 +13003,7 @@ GameObject:
   - component: {fileID: 1732384951433605535}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (18)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13082,7 +13096,7 @@ GameObject:
   - component: {fileID: 1732384951437508616}
   m_Layer: 0
   m_Name: Struct_Curb_A (472)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13159,7 +13173,7 @@ GameObject:
   - component: {fileID: 1732384951442031388}
   m_Layer: 0
   m_Name: Structs
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13196,7 +13210,7 @@ GameObject:
   - component: {fileID: 1732384951459834846}
   m_Layer: 0
   m_Name: Struct_Curb_A (467)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13275,7 +13289,7 @@ GameObject:
   - component: {fileID: 1732384951464459542}
   m_Layer: 0
   m_Name: Struct_Curb_A (470)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13355,7 +13369,7 @@ GameObject:
   - component: {fileID: 1732384951476192788}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (23)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13449,7 +13463,7 @@ GameObject:
   - component: {fileID: 1732384951477629991}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (63)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13542,7 +13556,7 @@ GameObject:
   - component: {fileID: 1732384951496469186}
   m_Layer: 0
   m_Name: Struct_Curb_A (475)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13621,7 +13635,7 @@ GameObject:
   - component: {fileID: 1732384951502252038}
   m_Layer: 0
   m_Name: Struct_Curb_A (468)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13698,7 +13712,7 @@ GameObject:
   - component: {fileID: 1732384951525993185}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13757,7 +13771,7 @@ GameObject:
   - component: {fileID: 1732384951545291282}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (63)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13850,7 +13864,7 @@ GameObject:
   - component: {fileID: 1732384951546699403}
   m_Layer: 0
   m_Name: Struct_Curb_A (478)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13929,7 +13943,7 @@ GameObject:
   - component: {fileID: 1732384951588432601}
   m_Layer: 0
   m_Name: Struct_Curb_A (469)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14009,7 +14023,7 @@ GameObject:
   - component: {fileID: 1732384951604071238}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14102,7 +14116,7 @@ GameObject:
   - component: {fileID: 1732384951634261810}
   m_Layer: 0
   m_Name: Struct_Curb_A (477)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14181,7 +14195,7 @@ GameObject:
   - component: {fileID: 1732384951641381223}
   m_Layer: 0
   m_Name: Struct_Curb_A (471)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14260,7 +14274,7 @@ GameObject:
   - component: {fileID: 1732384951645069814}
   m_Layer: 0
   m_Name: Struct_Curb_A (480)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14339,7 +14353,7 @@ GameObject:
   - component: {fileID: 1732384951658321296}
   m_Layer: 0
   m_Name: Struct_Curb_A (473)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14418,7 +14432,7 @@ GameObject:
   - component: {fileID: 1732384951660302322}
   m_Layer: 0
   m_Name: Struct_Curb_A (480)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14497,7 +14511,7 @@ GameObject:
   - component: {fileID: 1732384951666494274}
   m_Layer: 0
   m_Name: Struct_Curb_A (463)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14577,7 +14591,7 @@ GameObject:
   - component: {fileID: 1732384951668142263}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14668,7 +14682,7 @@ GameObject:
   - component: {fileID: 1732384951676412592}
   m_Layer: 0
   m_Name: Field
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14702,7 +14716,7 @@ GameObject:
   - component: {fileID: 1732384951682260515}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14795,7 +14809,7 @@ GameObject:
   - component: {fileID: 1732384951689109822}
   m_Layer: 0
   m_Name: Struct_Curb_A (476)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14874,7 +14888,7 @@ GameObject:
   - component: {fileID: 1732384951692269593}
   m_Layer: 0
   m_Name: Struct_Curb_A (469)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14953,7 +14967,7 @@ GameObject:
   - component: {fileID: 1732384951696526571}
   m_Layer: 0
   m_Name: Struct_Curb_A (464)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15032,7 +15046,7 @@ GameObject:
   - component: {fileID: 1732384951696898296}
   m_Layer: 0
   m_Name: Struct_Curb_A (464)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15111,7 +15125,7 @@ GameObject:
   - component: {fileID: 1732384951705231048}
   m_Layer: 0
   m_Name: Struct_Curb_A (478)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15190,7 +15204,7 @@ GameObject:
   - component: {fileID: 1732384951705799189}
   m_Layer: 0
   m_Name: Struct_Curb_A (467)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15267,7 +15281,7 @@ GameObject:
   - component: {fileID: 1732384951713256208}
   m_Layer: 0
   m_Name: Corner
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15303,7 +15317,7 @@ GameObject:
   - component: {fileID: 1732384951715265893}
   m_Layer: 0
   m_Name: Struct_Curb_A (479)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15380,7 +15394,7 @@ GameObject:
   - component: {fileID: 1732384951729550877}
   m_Layer: 0
   m_Name: FX
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15412,7 +15426,7 @@ GameObject:
   - component: {fileID: 1732384951748468803}
   m_Layer: 0
   m_Name: Struct_Curb_A (471)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15491,7 +15505,7 @@ GameObject:
   - component: {fileID: 1732384951776565778}
   m_Layer: 0
   m_Name: Struct_Curb_A (465)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15571,7 +15585,7 @@ GameObject:
   - component: {fileID: 1732384951778666362}
   m_Layer: 0
   m_Name: Struct_Fullwall_Cor_B (4)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15664,7 +15678,7 @@ GameObject:
   - component: {fileID: 1732384951786869197}
   m_Layer: 0
   m_Name: Struct_Curb_A (478)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15744,7 +15758,7 @@ GameObject:
   - component: {fileID: 1732384951790007105}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15838,7 +15852,7 @@ GameObject:
   - component: {fileID: 1732384951795933171}
   m_Layer: 0
   m_Name: Struct_Curb_A (474)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15917,7 +15931,7 @@ GameObject:
   - component: {fileID: 1732384951834517952}
   m_Layer: 0
   m_Name: Struct_Curb_A (477)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15996,7 +16010,7 @@ GameObject:
   - component: {fileID: 1732384951862252729}
   m_Layer: 0
   m_Name: Struct_Curb_A (467)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16075,7 +16089,7 @@ GameObject:
   - component: {fileID: 1732384951876360048}
   m_Layer: 0
   m_Name: Struct_Curb_A (466)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16155,7 +16169,7 @@ GameObject:
   - component: {fileID: 1732384951883746708}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16280,7 +16294,7 @@ GameObject:
   - component: {fileID: 1732384951891169269}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (7)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16374,7 +16388,7 @@ GameObject:
   - component: {fileID: 1732384951898424900}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (22)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16468,7 +16482,7 @@ GameObject:
   - component: {fileID: 1732384951902988294}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (63)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16561,7 +16575,7 @@ GameObject:
   - component: {fileID: 1732384951915151676}
   m_Layer: 0
   m_Name: Struct_Curb_A (467)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16640,7 +16654,7 @@ GameObject:
   - component: {fileID: 1732384951927346555}
   m_Layer: 0
   m_Name: Struct_Curb_A (472)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16717,7 +16731,7 @@ GameObject:
   - component: {fileID: 1732384951935295695}
   m_Layer: 0
   m_Name: WallMultiple
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16752,7 +16766,7 @@ GameObject:
   - component: {fileID: 1732384951939070113}
   m_Layer: 0
   m_Name: Struct_Curb_A (481)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16832,7 +16846,7 @@ GameObject:
   - component: {fileID: 1732384951951620017}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (64)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16925,7 +16939,7 @@ GameObject:
   - component: {fileID: 1732384951955202748}
   m_Layer: 0
   m_Name: Struct_Curb_A (466)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17002,7 +17016,7 @@ GameObject:
   - component: {fileID: 1732384951958442557}
   m_Layer: 0
   m_Name: FX
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17034,7 +17048,7 @@ GameObject:
   - component: {fileID: 1732384951971415686}
   m_Layer: 0
   m_Name: Struct_Curb_A (472)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17114,7 +17128,7 @@ GameObject:
   - component: {fileID: 1732384951984642567}
   m_Layer: 0
   m_Name: Struct_Fullwall_Cor_B (4)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17205,7 +17219,7 @@ GameObject:
   - component: {fileID: 1732384951985580913}
   m_Layer: 0
   m_Name: FX
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17237,7 +17251,7 @@ GameObject:
   - component: {fileID: 1732384951991529335}
   m_Layer: 0
   m_Name: Struct_Curb_A (468)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17316,7 +17330,7 @@ GameObject:
   - component: {fileID: 1732384951993194042}
   m_Layer: 0
   m_Name: Struct_Curb_A (481)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17395,7 +17409,7 @@ GameObject:
   - component: {fileID: 1732384952011149284}
   m_Layer: 0
   m_Name: Struct_Curb_A (478)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17474,7 +17488,7 @@ GameObject:
   - component: {fileID: 1732384952014087715}
   m_Layer: 0
   m_Name: Struct_Curb_A (469)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17554,7 +17568,7 @@ GameObject:
   - component: {fileID: 1732384952052004419}
   m_Layer: 0
   m_Name: Struct_Fullwall_Cor_B (5)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17647,7 +17661,7 @@ GameObject:
   - component: {fileID: 1732384952057400495}
   m_Layer: 0
   m_Name: Struct_Curb_A (482)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17726,7 +17740,7 @@ GameObject:
   - component: {fileID: 1732384952057631645}
   m_Layer: 0
   m_Name: Struct_Curb_A (464)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17805,7 +17819,7 @@ GameObject:
   - component: {fileID: 1732384952066157638}
   m_Layer: 0
   m_Name: Struct_Curb_A (463)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17884,7 +17898,7 @@ GameObject:
   - component: {fileID: 1732384952088417540}
   m_Layer: 0
   m_Name: Struct_Curb_A (482)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17963,7 +17977,7 @@ GameObject:
   - component: {fileID: 1732384952089683279}
   m_Layer: 0
   m_Name: Struct_Curb_A (481)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18042,7 +18056,7 @@ GameObject:
   - component: {fileID: 1732384952124774893}
   m_Layer: 0
   m_Name: Struct_Curb_A (474)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18119,7 +18133,7 @@ GameObject:
   - component: {fileID: 1732384952137008684}
   m_Layer: 0
   m_Name: FX
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18152,7 +18166,7 @@ GameObject:
   - component: {fileID: 1732384952141472367}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18275,7 +18289,7 @@ GameObject:
   - component: {fileID: 1732384952145403710}
   m_Layer: 0
   m_Name: Struct_Curb_A (475)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18354,7 +18368,7 @@ GameObject:
   - component: {fileID: 1732384952148044954}
   m_Layer: 0
   m_Name: Struct_Curb_A (470)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18433,7 +18447,7 @@ GameObject:
   - component: {fileID: 1732384952156614606}
   m_Layer: 0
   m_Name: Struct_Curb_A (470)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18512,7 +18526,7 @@ GameObject:
   - component: {fileID: 1732384952157563500}
   m_Layer: 0
   m_Name: Struct_Curb_A (468)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18589,7 +18603,7 @@ GameObject:
   - component: {fileID: 1732384952163262463}
   m_Layer: 0
   m_Name: Cover
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18624,7 +18638,7 @@ GameObject:
   - component: {fileID: 1732384952170219624}
   m_Layer: 0
   m_Name: Struct_Curb_A (476)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18703,7 +18717,7 @@ GameObject:
   - component: {fileID: 1732384952172785950}
   m_Layer: 0
   m_Name: Struct_Curb_A (477)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18783,7 +18797,7 @@ GameObject:
   - component: {fileID: 1732384952174585081}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (22)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18876,7 +18890,7 @@ GameObject:
   - component: {fileID: 1732384952179416924}
   m_Layer: 0
   m_Name: Struct_Curb_A (463)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18953,7 +18967,7 @@ GameObject:
   - component: {fileID: 1732384952180352941}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18990,7 +19004,7 @@ GameObject:
   - component: {fileID: 1732384952182093016}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (64)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19083,7 +19097,7 @@ GameObject:
   - component: {fileID: 1732384952188731164}
   m_Layer: 0
   m_Name: Struct_Curb_A (466)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19163,7 +19177,7 @@ GameObject:
   - component: {fileID: 1732384952197465259}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (63)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19256,7 +19270,7 @@ GameObject:
   - component: {fileID: 1732384952204399814}
   m_Layer: 0
   m_Name: Struct_Curb_A (464)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19335,7 +19349,7 @@ GameObject:
   - component: {fileID: 1732384952205949904}
   m_Layer: 0
   m_Name: Struct_Curb_A (479)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19414,7 +19428,7 @@ GameObject:
   - component: {fileID: 1732384952210741906}
   m_Layer: 0
   m_Name: Struct_Curb_A (468)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19493,7 +19507,7 @@ GameObject:
   - component: {fileID: 1732384952215964903}
   m_Layer: 0
   m_Name: Struct_Curb_A (477)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19572,7 +19586,7 @@ GameObject:
   - component: {fileID: 1732384952225212394}
   m_Layer: 0
   m_Name: Struct_Curb_A (477)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19652,7 +19666,7 @@ GameObject:
   - component: {fileID: 1732384952227704804}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (22)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19746,7 +19760,7 @@ GameObject:
   - component: {fileID: 1732384952242080565}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19840,7 +19854,7 @@ GameObject:
   - component: {fileID: 1732384952243380995}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (22)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19933,7 +19947,7 @@ GameObject:
   - component: {fileID: 1732384952257371496}
   m_Layer: 0
   m_Name: Struct_Curb_A (463)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20012,7 +20026,7 @@ GameObject:
   - component: {fileID: 1732384952258885610}
   m_Layer: 0
   m_Name: Struct_Curb_A (465)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20092,7 +20106,7 @@ GameObject:
   - component: {fileID: 1732384952271603257}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (23)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20186,7 +20200,7 @@ GameObject:
   - component: {fileID: 1732384952281889697}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20310,7 +20324,7 @@ GameObject:
   - component: {fileID: 1732384952282642680}
   m_Layer: 0
   m_Name: Struct_Curb_A (482)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20389,7 +20403,7 @@ GameObject:
   - component: {fileID: 1732384952283636534}
   m_Layer: 0
   m_Name: Struct_Curb_A (473)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20469,7 +20483,7 @@ GameObject:
   - component: {fileID: 1732384952290115902}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (64)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20562,7 +20576,7 @@ GameObject:
   - component: {fileID: 1732384952290215750}
   m_Layer: 0
   m_Name: Struct_Curb_A (477)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20641,7 +20655,7 @@ GameObject:
   - component: {fileID: 1754489092630906480}
   m_Layer: 0
   m_Name: Struct_Curb_A (465)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20720,7 +20734,7 @@ GameObject:
   - component: {fileID: 1754194419934499332}
   m_Layer: 0
   m_Name: Struct_Curb_A (471)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20800,7 +20814,7 @@ GameObject:
   - component: {fileID: 1796507906981289114}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20895,7 +20909,7 @@ GameObject:
   - component: {fileID: 1796900819988063002}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (24)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20988,7 +21002,7 @@ GameObject:
   - component: {fileID: 1754415454232701544}
   m_Layer: 0
   m_Name: Struct_Curb_A (476)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21067,7 +21081,7 @@ GameObject:
   - component: {fileID: 1755097208120699182}
   m_Layer: 0
   m_Name: Struct_Curb_A (463)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21146,7 +21160,7 @@ GameObject:
   - component: {fileID: 1756275906935204678}
   m_Layer: 0
   m_Name: Struct_Curb_A (473)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21225,7 +21239,7 @@ GameObject:
   - component: {fileID: 1756319579236542524}
   m_Layer: 0
   m_Name: Struct_Curb_A (469)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21304,7 +21318,7 @@ GameObject:
   - component: {fileID: 1756312761134065454}
   m_Layer: 0
   m_Name: Struct_Curb_A (479)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21383,7 +21397,7 @@ GameObject:
   - component: {fileID: 1754324609982041928}
   m_Layer: 0
   m_Name: Struct_Curb_A (470)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21463,7 +21477,7 @@ GameObject:
   - component: {fileID: 1793421392679145052}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (63)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21556,7 +21570,7 @@ GameObject:
   - component: {fileID: 1754284814763922526}
   m_Layer: 0
   m_Name: Struct_Curb_A (468)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21635,7 +21649,7 @@ GameObject:
   - component: {fileID: 1754493400400814322}
   m_Layer: 0
   m_Name: Struct_Curb_A (480)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21714,7 +21728,7 @@ GameObject:
   - component: {fileID: 1754320593834779712}
   m_Layer: 0
   m_Name: Struct_Curb_A (482)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21793,7 +21807,7 @@ GameObject:
   - component: {fileID: 1754406847134014152}
   m_Layer: 0
   m_Name: Struct_Curb_A (475)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21872,7 +21886,7 @@ GameObject:
   - component: {fileID: 1755990129248041846}
   m_Layer: 0
   m_Name: Struct_Curb_A (478)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21951,7 +21965,7 @@ GameObject:
   - component: {fileID: 1754262233656780314}
   m_Layer: 0
   m_Name: Struct_Curb_A (467)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22031,7 +22045,7 @@ GameObject:
   - component: {fileID: 1796407692291966139}
   m_Layer: 0
   m_Name: Struct_Fullwall_Cor_B
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22125,7 +22139,7 @@ GameObject:
   - component: {fileID: 1796872305767995730}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_D
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22249,7 +22263,7 @@ GameObject:
   - component: {fileID: 1796789365975424723}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22343,7 +22357,7 @@ GameObject:
   - component: {fileID: 1796789366584170292}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22437,7 +22451,7 @@ GameObject:
   - component: {fileID: 1796789367022043129}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (3)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22531,7 +22545,7 @@ GameObject:
   - component: {fileID: 1796789366787371194}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (4)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22625,7 +22639,7 @@ GameObject:
   - component: {fileID: 1796789366683808413}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22719,7 +22733,7 @@ GameObject:
   - component: {fileID: 1796789366874413271}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22813,7 +22827,7 @@ GameObject:
   - component: {fileID: 1796789367413673788}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (5)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22907,7 +22921,7 @@ GameObject:
   - component: {fileID: 1796809214843234816}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (18)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23000,7 +23014,7 @@ GameObject:
   - component: {fileID: 1754607954603852420}
   m_Layer: 0
   m_Name: Struct_Curb_A (466)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23080,7 +23094,7 @@ GameObject:
   - component: {fileID: 1796915730727097688}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23173,7 +23187,7 @@ GameObject:
   - component: {fileID: 1754325504252539912}
   m_Layer: 0
   m_Name: Struct_Curb_A (472)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23253,7 +23267,7 @@ GameObject:
   - component: {fileID: 1793274191315673030}
   m_Layer: 0
   m_Name: Struct_Rail_Mid_B (64)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23347,7 +23361,7 @@ GameObject:
   - component: {fileID: 1796046693678713420}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (22)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23440,7 +23454,7 @@ GameObject:
   - component: {fileID: 1755070754426173874}
   m_Layer: 0
   m_Name: Struct_Curb_A (477)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23520,7 +23534,7 @@ GameObject:
   - component: {fileID: 1796053265306923652}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23613,7 +23627,7 @@ GameObject:
   - component: {fileID: 1754491257221930506}
   m_Layer: 0
   m_Name: Struct_Curb_A (474)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23692,7 +23706,7 @@ GameObject:
   - component: {fileID: 1754447570780786560}
   m_Layer: 0
   m_Name: Struct_Curb_A (481)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23771,7 +23785,7 @@ GameObject:
   - component: {fileID: 1054705603138037622}
   m_Layer: 0
   m_Name: Flames_Slow
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28525,7 +28539,7 @@ GameObject:
   - component: {fileID: 1927379044757679770}
   m_Layer: 0
   m_Name: Bld_Temple_Int_Column_A (7)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28618,7 +28632,7 @@ GameObject:
   - component: {fileID: 1982471062894198044}
   m_Layer: 0
   m_Name: Bld_Temple_Int_Column_A (8)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28708,9 +28722,10 @@ GameObject:
   - component: {fileID: 3105545628844532245}
   - component: {fileID: 2069059739618422192}
   - component: {fileID: 4274533521023064442}
+  - component: {fileID: 1533504790751054551}
   m_Layer: 0
   m_Name: Roof
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28776,6 +28791,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1533504790751054551
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2329150350193064111}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4711208715938537054, guid: 64020230ef6881d4b8dbf530382b2204, type: 3}
 --- !u!1 &2455057684418020312
 GameObject:
   m_ObjectHideFlags: 0
@@ -28790,7 +28819,7 @@ GameObject:
   - component: {fileID: 2455057684418020313}
   m_Layer: 9
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28884,7 +28913,7 @@ GameObject:
   - component: {fileID: 2656549291466151201}
   m_Layer: 0
   m_Name: Bld_Temple_Int_Column_A (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28977,7 +29006,7 @@ GameObject:
   - component: {fileID: 3618654471070976258}
   m_Layer: 0
   m_Name: Bld_Temple_Int_Column_A (9)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29067,7 +29096,7 @@ GameObject:
   - component: {fileID: 8064625535025210463}
   m_Layer: 0
   m_Name: FetchScale
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29102,7 +29131,7 @@ GameObject:
   - component: {fileID: 3798012104849881992}
   m_Layer: 0
   m_Name: Bld_Temple_Int_Column_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29195,7 +29224,7 @@ GameObject:
   - component: {fileID: 3797778877986854803}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29289,7 +29318,7 @@ GameObject:
   - component: {fileID: 3773291512417090945}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (13)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29383,7 +29412,7 @@ GameObject:
   - component: {fileID: 3773291512545508740}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (12)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29477,7 +29506,7 @@ GameObject:
   - component: {fileID: 3773291512564202377}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (16)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29571,7 +29600,7 @@ GameObject:
   - component: {fileID: 3773291512769516325}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (10)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29665,7 +29694,7 @@ GameObject:
   - component: {fileID: 3773291512809395784}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_A (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29759,7 +29788,7 @@ GameObject:
   - component: {fileID: 3773291513037746576}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29795,7 +29824,7 @@ GameObject:
   - component: {fileID: 3773291513161773717}
   m_Layer: 0
   m_Name: Struct_Stairs_B (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29891,7 +29920,7 @@ GameObject:
   - component: {fileID: 3773291513182498843}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (25)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29982,9 +30011,10 @@ GameObject:
   - component: {fileID: 3773291513244431322}
   - component: {fileID: 3773291513244431324}
   - component: {fileID: 3773291513244431323}
+  - component: {fileID: 9181852074544237484}
   m_Layer: 0
   m_Name: Statue (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30050,6 +30080,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &9181852074544237484
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773291513244431321}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 69.42712, y: 176.32423, z: 62.757687}
+  m_Center: {x: -2.019391, y: -14.402374, z: 3.3746068}
 --- !u!1 &3773291513248075013
 GameObject:
   m_ObjectHideFlags: 0
@@ -30064,7 +30107,7 @@ GameObject:
   - component: {fileID: 3773291513248075014}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_A (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30161,7 +30204,7 @@ GameObject:
   - component: {fileID: 3773291513270176569}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (21)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30252,7 +30295,7 @@ GameObject:
   - component: {fileID: 3773291513279079841}
   m_Layer: 0
   m_Name: Towers
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30299,7 +30342,7 @@ GameObject:
   - component: {fileID: 3773291513299866082}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30393,7 +30436,7 @@ GameObject:
   - component: {fileID: 3773291513377105775}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (26)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30484,9 +30527,10 @@ GameObject:
   - component: {fileID: 3773291513414031181}
   - component: {fileID: 3773291513414031183}
   - component: {fileID: 3773291513414031182}
+  - component: {fileID: 5080832442361471956}
   m_Layer: 0
   m_Name: Statue (2)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30552,6 +30596,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5080832442361471956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773291513414031180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 69.42712, y: 176.32423, z: 62.757687}
+  m_Center: {x: -2.0196657, y: -14.402374, z: 3.3746831}
 --- !u!1 &3773291513436008136
 GameObject:
   m_ObjectHideFlags: 0
@@ -30566,7 +30623,7 @@ GameObject:
   - component: {fileID: 3773291513436008138}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (23)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30660,7 +30717,7 @@ GameObject:
   - component: {fileID: 3773291513485110060}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (11)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30754,7 +30811,7 @@ GameObject:
   - component: {fileID: 3773291513722565544}
   m_Layer: 9
   m_Name: Struct_Curb_Transition_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30848,7 +30905,7 @@ GameObject:
   - component: {fileID: 3773291513952496757}
   m_Layer: 0
   m_Name: Struct_Stairs_B (1)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30944,7 +31001,7 @@ GameObject:
   - component: {fileID: 3773291513970201586}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (17)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31038,7 +31095,7 @@ GameObject:
   - component: {fileID: 3773291514081797727}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31132,7 +31189,7 @@ GameObject:
   - component: {fileID: 3773291514104394444}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (24)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31226,7 +31283,7 @@ GameObject:
   - component: {fileID: 3773291514164443253}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (14)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31320,7 +31377,7 @@ GameObject:
   - component: {fileID: 3773291514360442200}
   m_Layer: 0
   m_Name: Struct_Fullwall_Mid_A (22)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31414,7 +31471,7 @@ GameObject:
   - component: {fileID: 3773291514364552678}
   m_Layer: 0
   m_Name: Prop_FireTorch_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31508,7 +31565,7 @@ GameObject:
   - component: {fileID: 3773291514399554530}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_A (3)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31605,7 +31662,7 @@ GameObject:
   - component: {fileID: 3773291514429364713}
   m_Layer: 0
   m_Name: Struct_Stairs_B (3)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31701,7 +31758,7 @@ GameObject:
   - component: {fileID: 3799698561082506603}
   m_Layer: 0
   m_Name: Struct_Fullwall_Junc_A
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31798,7 +31855,7 @@ GameObject:
   - component: {fileID: 4173930510501507091}
   m_Layer: 0
   m_Name: Bld_Temple_Int_Column_A (3)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31890,7 +31947,7 @@ GameObject:
   - component: {fileID: 89310284904993197}
   m_Layer: 0
   m_Name: FlameAccecary
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31950,7 +32007,7 @@ GameObject:
   - component: {fileID: 5286390006702174509}
   m_Layer: 0
   m_Name: Bld_Temple_Int_Column_A (6)
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -32040,7 +32097,7 @@ GameObject:
   - component: {fileID: 6476054360439297896}
   m_Layer: 0
   m_Name: statue
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -32073,7 +32130,7 @@ GameObject:
   - component: {fileID: 1187228776811994710}
   m_Layer: 0
   m_Name: FlameAccecary
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32130,9 +32187,10 @@ GameObject:
   - component: {fileID: 2345969070005790152}
   - component: {fileID: 3526378651676822843}
   - component: {fileID: 8054070829344274591}
+  - component: {fileID: 1488156249553870188}
   m_Layer: 0
   m_Name: Statue
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -32198,6 +32256,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1488156249553870188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789584694699214044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 69.4271, y: 176.32423, z: 62.75767}
+  m_Center: {x: -2.0195432, y: -14.402374, z: 3.3746822}
 --- !u!1 &7232041875098920546
 GameObject:
   m_ObjectHideFlags: 0
@@ -32211,7 +32282,7 @@ GameObject:
   - component: {fileID: 7394573022400143062}
   m_Layer: 0
   m_Name: Flames_Slow
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36964,7 +37035,7 @@ GameObject:
   - component: {fileID: 669289790486540268}
   m_Layer: 0
   m_Name: FlameAccecary
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37023,7 +37094,7 @@ GameObject:
   - component: {fileID: 8116604746280058428}
   m_Layer: 0
   m_Name: FlameAccecary
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37082,7 +37153,7 @@ GameObject:
   - component: {fileID: 4372608260659611031}
   m_Layer: 0
   m_Name: Flames_Slow
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41835,7 +41906,7 @@ GameObject:
   - component: {fileID: 8585346089846146921}
   m_Layer: 0
   m_Name: Flames_Slow
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

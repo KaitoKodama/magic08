@@ -48,21 +48,14 @@ public class UISettingMenu : MonoBehaviour
     [SerializeField] CUnit rotate = default;
     [SerializeField] CUnit hand = default;
 
-    private ActorCalibrator calibrator;
-    private ActorInput actorInput;
     private bool enable = false;
 
 
     // Unityランタイム
     private void Start()
     {
-        var actor = GameObject.FindWithTag("Actor");
-        actorInput = actor.GetComponent<ActorInput>();
-        calibrator = actor.GetComponent<ActorCalibrator>();
-
         rotate.UIC.AddListener(() => { OnButtonDown(rotate); });
         hand.UIC.AddListener(() => { OnButtonDown(hand); });
-
         rotate.UICNext.AddListener(() => { OnRotateButton(1); });
         rotate.UICPrev.AddListener(() => { OnRotateButton(-1); });
         hand.UICNext.AddListener(() => { OnHandButton(StaffHoldingHand.RightHand); });
@@ -73,15 +66,22 @@ public class UISettingMenu : MonoBehaviour
     }
     private void Update()
     {
-        var input = Locator<ActorInput>.I;
-        if (input.IsStart(true) || input.IsThumb(true))
+        if (Locator<PlayerInput>.I != null)
         {
-            enable = !enable;
-            menuCanvas.SetActive(enable);
-            if (!enable)
+            var input = Locator<PlayerInput>.I;
+            if (input.IsStart(true) || input.IsThumb(true))
             {
-                ResetCUnitEnable();
+                enable = !enable;
+                menuCanvas.SetActive(enable);
+                if (!enable)
+                {
+                    ResetCUnitEnable();
+                }
             }
+        }
+        else
+        {
+            menuCanvas.SetActive(false);
         }
     }
 
@@ -102,13 +102,14 @@ public class UISettingMenu : MonoBehaviour
     }
     private void OnRotateButton(int add)
     {
-        calibrator.SetActorRotate(add);
-        float rot = calibrator.Rotate;
+        var instance = Locator<Player>.I;
+        instance.SetActorRotate(add);
+        float rot = instance.Rotate;
         rotate.SetText($"{rot}°");
     }
     private void OnHandButton(StaffHoldingHand expectHand)
     {
-        actorInput.SetStaffHoldingHand(expectHand);
+        Locator<PlayerInput>.I.SetStaffHoldingHand(expectHand);
         string txt = (expectHand == StaffHoldingHand.LeftHand) ? "左手" : "右手";
         hand.SetText(txt);
     }

@@ -9,38 +9,35 @@ public class MagicBullet : Magic
     [SerializeField] ParticleSystem ring = default;
     [SerializeField] GradiantSet gradiantSet = default;
 
-    private Transform trackTarget;
-    private bool isExcute = false;
-
 
     private void Update()
     {
-        if (!isExcute)
+        if (!IsExcute)
         {
-            OnChaseToTarget(trackTarget);
+            OnChaseToTarget();
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        OnApplyDamage(other.gameObject, 10);
+        IApplyDamageTrigger(other);
     }
 
 
-    public override void OnGenerate(DataVisual data, Transform origin)
+    protected override void Generate(CharacterType character, DataVisual data, Transform origin)
     {
-        this.data = data;
-        trackTarget = origin;
-        transform.position = origin.position;
-
         var co = core.colorOverLifetime;
         var ri = ring.colorOverLifetime;
         var grad = gradiantSet.GetGradient(data.Attribute);
         co.color = grad;
         ri.color = grad;
     }
-    public override void OnExcute(Vector3 expect)
+    protected override void Excute(Vector3 expect)
     {
-        isExcute = true;
         OnForceToRigidWithLifeTime(expect);
+    }
+    protected override void Destroy()
+    {
+        InstantinateResorces("Hit01");
+        Destroy(this.gameObject);
     }
 }

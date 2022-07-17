@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u708E\u9663"
   nameEn: Flame area
   prefab: {fileID: -1500569646990916711, guid: b606621ee9d0b1d41b2f4cc4035f82d0, type: 3}
+  value: 52.5
   requireMP: 35
   explain: "\u708E\u3092\u64CD\u308A\u3001\u8FBA\u308A\u3092\u708E\u306E\u30D5\u30A3\u30FC\u30EB\u30C9\u3078\u3068\u5909\u3048\u308B\u3002"
   grade: 2

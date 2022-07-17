@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u518D\u751F\u6C34"
   nameEn: Heal Water
   prefab: {fileID: -1500569646990916711, guid: b606621ee9d0b1d41b2f4cc4035f82d0, type: 3}
+  value: 45
   requireMP: 30
   explain: "\u50B7\u3092\u7652\u3059\u6C34\u3092\u4F5C\u308A\u3060\u3057\u3001\u50B7\u3092\u6CBB\u3059\u3002"
   grade: 1

@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u9B54\u529B\u6483"
   nameEn: Magic Bullet
   prefab: {fileID: 7724985425290894679, guid: 773de0644ca685d4d82a7ac5fdbbc457, type: 3}
+  value: 7.5
   requireMP: 5
   explain: "\u5358\u4F53\u653B\u6483\u9B54\u8853"
   grade: 0

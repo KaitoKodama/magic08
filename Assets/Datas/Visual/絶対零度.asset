@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u7D76\u5BFE\u96F6\u5EA6"
   nameEn: Absolute Zero
   prefab: {fileID: -1500569646990916711, guid: b606621ee9d0b1d41b2f4cc4035f82d0, type: 3}
+  value: 52.5
   requireMP: 35
   explain: "\u7D76\u5BFE\u96F6\u5EA6\u306B\u8FD1\u3044\u7A7A\u9593\u3092\u5275\u308A\u3060\u3059\u3002\u305D\u306E\u7A7A\u9593\u306E\u6642\u3059\u3089\u51CD\u3089\u305B\u308B\u307B\u3069\u306E\u6E29\u5EA6\u3002"
   grade: 2

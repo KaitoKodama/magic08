@@ -26,6 +26,9 @@ public class StageSOEditor : Editor
 	GUIContent attributeLabel;
 	SerializedProperty attribute;
 
+	GUIContent valueLabel;
+	SerializedProperty value;
+
 	GUIContent editLabel;
 	SerializedProperty edit;
 
@@ -37,6 +40,7 @@ public class StageSOEditor : Editor
 		attributeLabel = new GUIContent("魔法属性");
 		requireMPLabel = new GUIContent("発動MP");
 		explainLabel = new GUIContent("説明");
+		valueLabel = new GUIContent("値");
 		editLabel = new GUIContent("カスタム編集");
 
 		prefabProp = serializedObject.FindProperty("prefab");
@@ -44,6 +48,7 @@ public class StageSOEditor : Editor
 		explain = serializedObject.FindProperty("explain");
 		grade = serializedObject.FindProperty("grade");
 		attribute = serializedObject.FindProperty("attribute");
+		value = serializedObject.FindProperty("value");
 		edit = serializedObject.FindProperty("edit");
 	}
 	public override void OnInspectorGUI()
@@ -62,6 +67,7 @@ public class StageSOEditor : Editor
 			EditorGUILayout.PropertyField(grade, gradeLabel);
 			EditorGUILayout.PropertyField(attribute, attributeLabel);
 			EditorGUILayout.PropertyField(requireMP, requireMPLabel);
+			EditorGUILayout.PropertyField(value, valueLabel);
 			EditorGUILayout.PropertyField(explain, explainLabel);
 		}
         else
@@ -70,8 +76,9 @@ public class StageSOEditor : Editor
 			EditorGUILayout.LabelField($"魔法等級：{ContextName.GradeName(grade.intValue)}");
 			EditorGUILayout.LabelField($"魔法属性：{ContextName.AtributeName(attribute.intValue)}");
 			EditorGUILayout.LabelField($"発動MP：{requireMP.floatValue}");
+			EditorGUILayout.LabelField($"値：{value.floatValue}");
 			EditorGUILayout.LabelField($"説明：{explain.stringValue}");
-        }
+		}
 
 		serializedObject.ApplyModifiedProperties();
 	}

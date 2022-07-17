@@ -4,32 +4,27 @@ using UnityEngine;
 
 public class MagicSample : Magic
 {
-    private Transform trackTarget;
-    private bool isExcute = false;
-
 
     private void Update()
     {
-        if (!isExcute)
+        if (!IsExcute)
         {
-            OnChaseToTarget(trackTarget);
+            OnChaseToTarget();
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        OnApplyDamage(other.gameObject, 10);
+        IApplyDamageTrigger(other);
     }
 
 
-    public override void OnGenerate(DataVisual data, Transform origin)
+    protected override void Excute(Vector3 expect)
     {
-        this.data = data;
-        trackTarget = origin;
-        transform.position = origin.position;
-    }
-    public override void OnExcute(Vector3 expect)
-    {
-        isExcute = true;
         OnForceToRigidWithLifeTime(expect);
+    }
+    protected override void Destroy()
+    {
+        InstantinateResorces("Hit03");
+        Destroy(this.gameObject);
     }
 }

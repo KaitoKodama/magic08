@@ -135,7 +135,8 @@ public class ItemDataCreateWindow : ScriptableObjectCreater<DataVisual>
         var en = dataQueue.Dequeue();
         var mp = int.Parse(dataQueue.Dequeue());
         var exp = dataQueue.Dequeue();
+        var value = float.Parse(dataQueue.Dequeue());
 
-        data.SetVisualStatement(ja, en, mp, exp, grade, atribute);
+        data.SetVisualStatement(ja, en, mp, value, exp, grade, atribute);
     }
 }

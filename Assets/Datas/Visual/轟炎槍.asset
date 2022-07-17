@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u8F5F\u708E\u69CD"
   nameEn: Great Flame Lance
   prefab: {fileID: 4202834042853925700, guid: f6c3010e830214c4681cdc96a23f1b9f, type: 3}
+  value: 37.5
   requireMP: 25
   explain: "\u76F8\u624B\u306B\u5BFE\u3057\u3001\u708E\u306E\u69CD\u3092\u7A7F\u3064\u3002\u708E\u69CD\u3088\u308A\u5A01\u529B\u304C\u9AD8\u3044\u3002"
   grade: 1

@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u708E\u67F1"
   nameEn: Flame pole
   prefab: {fileID: -1500569646990916711, guid: b606621ee9d0b1d41b2f4cc4035f82d0, type: 3}
+  value: 45
   requireMP: 30
   explain: "\u708E\u306E\u67F1\u3092\u5275\u308B\u3002\u672C\u5F53\u306B\u5275\u308A\u3060\u3059\u3060\u3051\u3002\u305F\u3060\u3001\u653B\u6483\u306B\u3082\u8EE2\u7528\u3067\u304D\u308B\u304C\u653B\u6483\u7528\u3067\u306F\u306A\u3044\u3002"
   grade: 1

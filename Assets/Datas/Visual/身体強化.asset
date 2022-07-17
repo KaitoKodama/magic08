@@ -15,6 +15,7 @@ MonoBehaviour:
   nameJa: "\u8EAB\u4F53\u5F37\u5316"
   nameEn: Physical Up
   prefab: {fileID: -1500569646990916711, guid: b606621ee9d0b1d41b2f4cc4035f82d0, type: 3}
+  value: 15
   requireMP: 10
   explain: "\u81EA\u9663\u306E\u8EAB\u4F53\u80FD\u529B\u3092\u4E0A\u6607\u3055\u305B\u308B"
   grade: 0

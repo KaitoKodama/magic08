@@ -8,36 +8,33 @@ public class MagicLance : Magic
     [SerializeField] ParticleSystem particle = default;
     [SerializeField] GradiantSet gradiantSet = default;
 
-    private Transform trackTarget;
-    private bool isExcute = false;
-
 
     private void Update()
     {
-        if (!isExcute)
+        if (!IsExcute)
         {
-            OnChaseToTarget(trackTarget);
-            transform.forward = trackTarget.forward;
+            OnLerpToTarget();
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        OnApplyDamage(other.gameObject, 10);
+        IApplyDamageTrigger(other);
     }
 
 
-    public override void OnGenerate(DataVisual data, Transform origin)
+    protected override void Generate(CharacterType character, DataVisual data, Transform origin)
     {
-        this.data = data;
-        trackTarget = origin;
-        transform.position = origin.position;
-
         var col = particle.colorOverLifetime;
         col.color = gradiantSet.GetGradient(data.Attribute);
     }
-    public override void OnExcute(Vector3 expect)
+    protected override void Excute(Vector3 expect)
     {
-        isExcute = true;
+        transform.forward = expect;
         OnForceToRigidWithLifeTime(expect);
+    }
+    protected override void Destroy()
+    {
+        InstantinateResorces("Hit02");
+        Destroy(this.gameObject);
     }
 }
