@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e5da8eb27d346a478fae6e20138b7b9, type: 3}
-  m_Name: PlayerData
+  m_Name: Player
   m_EditorClassIdentifier: 
-  character: 0
-  maxHp: 100
+  maxHp: 1000
   maxMp: 100
-  refillSpeed: 1
-  ownerName: 
+  refillSpeed: 10
+  ownerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"
   level: 1

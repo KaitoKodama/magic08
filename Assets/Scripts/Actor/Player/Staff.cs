@@ -5,8 +5,6 @@ using DG.Tweening;
 
 public class Staff : MonoBehaviour
 {
-    [SerializeField] UIMagicSelecter magicSelecter = default;
-    [SerializeField] StaffTracker staffTracker = default;
     [SerializeField] Transform tips = default;
     [SerializeField] Transform staffSelf = default;
     private Animator animator;
@@ -23,16 +21,10 @@ public class Staff : MonoBehaviour
 
 
     public Transform Tips => tips;
-    public void RequestToSwapOrAnimateBegin(bool exist)
+
+    public void OnShootAnimation()
     {
-        if (exist)
-        {
-            animator.SetTrigger(IsShootHash);
-        }
-        else
-        {
-            magicSelecter.RequestSwapGridContent(tips);
-        }
+        animator.SetTrigger(IsShootHash);
     }
     public void OnGrabState(bool isGrab, Transform hand = null)
     {
@@ -44,7 +36,6 @@ public class Staff : MonoBehaviour
         }
         var scale = isGrab ? Vector3.one : Vector3.zero;
         staffSelf.DOScale(scale, 0.2f);
-        staffTracker.SetStaffFade(isGrab);
         animator.SetBool(IsGrabHash, isGrab);
     }
 }

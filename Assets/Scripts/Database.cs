@@ -11,6 +11,8 @@ public class Database : MonoBehaviour
     [SerializeField] DataGrade[] gradeset = default;
     [SerializeField] DataAttribute[] attributeset = default;
     [SerializeField] DataVisual[] visualset = default;
+    private DataGrade[] gradesets;
+
 
     private void Awake()
     {

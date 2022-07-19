@@ -7,24 +7,16 @@ public class MagicSample : Magic
 
     private void Update()
     {
-        if (!IsExcute)
-        {
-            OnChaseToTarget();
-        }
+        UpdateChaseIfNotExcute();
     }
     private void OnTriggerEnter(Collider other)
     {
-        IApplyDamageTrigger(other);
+        TriggerBranch(other, Data.Value);
     }
 
 
     protected override void Excute(Vector3 expect)
     {
         OnForceToRigidWithLifeTime(expect);
-    }
-    protected override void Destroy()
-    {
-        InstantinateResorces("Hit03");
-        Destroy(this.gameObject);
     }
 }

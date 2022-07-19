@@ -48,22 +48,8 @@ namespace Controller
 
 
 //------------------------------------------
-// インターフェイス
-//------------------------------------------
-public interface IApplyDamage
-{
-	void ApplyDamage(Magic self, CharacterType character, float damage);
-}
-
-
-//------------------------------------------
 // 列挙
 //------------------------------------------
-public enum CharacterType
-{
-	Player, Enemy, 
-}
-
 namespace MagicContext
 {
 	public enum MagicGrade 

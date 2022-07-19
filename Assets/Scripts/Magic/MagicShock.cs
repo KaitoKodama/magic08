@@ -11,18 +11,11 @@ public class MagicShock : Magic
 
     private void Update()
     {
-        if (!IsExcute)
-        {
-            OnChaseToTarget();
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        IApplyDamageTrigger(other);
+        UpdateChaseIfNotExcute();
     }
 
 
-    protected override void Generate(CharacterType character, DataVisual data, Transform origin)
+    protected override void Generate(DataVisual data, Transform origin)
     {
         var col = particle.colorOverLifetime;
         col.color = gradiantSet.GetGradient(data.Attribute);
@@ -30,10 +23,5 @@ public class MagicShock : Magic
     protected override void Excute(Vector3 expect)
     {
         OnForceToRigidWithLifeTime(expect);
-    }
-    protected override void Destroy()
-    {
-        InstantinateResorces("Hit04");
-        Destroy(this.gameObject);
     }
 }

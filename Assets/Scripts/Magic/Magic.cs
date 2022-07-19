@@ -6,61 +6,70 @@ using MagicContext;
 
 public abstract class Magic : MonoBehaviour
 {
-    protected DataVisual data;
-    protected Transform trackTarget;
+    private DataVisual data;
+    private Actor owner;
 
 
     //------------------------------------------
     // 外部共有関数
     //------------------------------------------
     public DataVisual Data => data;
-    public void OnGenerate(CharacterType character, DataVisual data, Transform origin)
+    public void OnGenerate(Actor owner, DataVisual data, Transform origin)
     {
         this.data = data;
-        this.trackTarget = origin;
-        this.CharacterType = character;
-        transform.position = trackTarget.position;
-        Generate(character, data, origin);
+        this.owner = owner;
+        TrackTarget = origin;
+        transform.position = TrackTarget.position;
+        Generate(data, origin);
     }
     public void OnExcute(Vector3 expect)
     {
         IsExcute = true;
         Excute(expect);
     }
-    public void DoDestroy()
-    {
-        this.Destroy();
-    }
 
 
     //------------------------------------------
     // 継承先共有抽象関数
     //------------------------------------------
-    protected virtual void Generate(CharacterType character, DataVisual data, Transform origin) { }
+    protected virtual void Generate(DataVisual data, Transform origin) { }
     protected abstract void Excute(Vector3 expect);
-    protected abstract void Destroy();
 
 
     //------------------------------------------
     // 継承先共有関数 - 戻り値あり
     //------------------------------------------
-    protected CharacterType CharacterType { get; private set; }
+    protected Transform TrackTarget { get; private set; }
     protected bool IsExcute { get; private set; } = false;
+    protected bool IsSameTypeActor(Actor compare)
+    {
+        if (owner.GetType() == compare.GetType())
+        {
+            return true;
+        }
+        return false;
+    }
 
 
     //------------------------------------------
     // 継承先共有関数 - 戻り値なし
     //------------------------------------------
-    protected void OnLerpToTarget(float speed = 3f)
+    protected void UpdateLerpIfNotExcute(float speed = 3f)
     {
-        var lerp = Vector3.Lerp(transform.position, trackTarget.position, Time.deltaTime * speed);
-        transform.position = lerp;
-        transform.forward = trackTarget.forward;
+        if (!IsExcute)
+        {
+            var lerp = Vector3.Lerp(transform.position, TrackTarget.position, Time.deltaTime * speed);
+            transform.position = lerp;
+            transform.forward = TrackTarget.forward;
+        }
     }
-    protected void OnChaseToTarget()
+    protected void UpdateChaseIfNotExcute()
     {
-        transform.position = trackTarget.position;
-        transform.forward = trackTarget.forward;
+        if (!IsExcute)
+        {
+            transform.position = TrackTarget.position;
+            transform.forward = TrackTarget.forward;
+        }
     }
     protected void OnForceToRigidWithLifeTime(Vector3 expect, float speed = 5f, float lifeTime = 10f)
     {
@@ -68,34 +77,51 @@ public abstract class Magic : MonoBehaviour
         rigid.velocity = expect * speed;
         Destroy(this.gameObject, lifeTime);
     }
-    protected void InstantinateResorces(string prefabName, float lifeTime = 5f)
+    protected void TriggerBranch(Collider col, float damage)
     {
-        var prefab = (GameObject)Resources.Load($"Prefabs/{prefabName}");
-        var obj = Instantiate(prefab, transform.position, Quaternion.identity);
-        Destroy(obj, lifeTime);
+        TryTriggerTreatOfActor(col, damage);
+        if (IsExcute)
+        {
+            TryTriggerTreatOfField(col);
+        }
     }
-    protected void IApplyDamageTrigger(Collider other)
+
+
+    //------------------------------------------
+    // 内部共有関数 - 戻り値なし
+    //------------------------------------------
+    private void TryTriggerTreatOfActor(Collider col, float damage)
     {
-        var target = other.GetComponent<IApplyDamage>();
+        var target = col.gameObject.GetComponent<Actor>();
         if (target != null)
         {
-            target.ApplyDamage(this, CharacterType, data.Value);
+            if (!IsSameTypeActor(target))
+            {
+                target.ApplyDamage(damage);
+                InstanceateFromResorces("Prefabs/Hit01");
+                if (target.GetComponent<Enemy>())
+                {
+                    Locator<PlayerInput>.I.OnVivration(0.1f, PlayerInput.VivrateHand.Holding);
+                }
+                Destroy(this.gameObject);
+            }
         }
-        OnBreakEffect(other);
     }
-
-
-    //------------------------------------------
-    // 内部共有関数
-    //------------------------------------------
-    private void OnBreakEffect(Collider other)
+    private void TryTriggerTreatOfField(Collider col)
     {
-        if (other.CompareTag("Field"))
+        if (col.gameObject.CompareTag("Field"))
         {
-            var prefab = (GameObject)Resources.Load("Prefabs/BreakEffect");
-            var obj = Instantiate(prefab, transform.position, Quaternion.identity);
-            Destroy(obj, 5f);
+            InstanceateFromResorces("Prefabs/BreakEffect");
+            if (owner.GetType() == typeof(Player) && owner.EnableMagic)
+            {
+                Locator<PlayerInput>.I.OnVivration(0.1f, PlayerInput.VivrateHand.Holding);
+            }
             Destroy(this.gameObject);
         }
+    }
+    private void InstanceateFromResorces(string path)
+    {
+        var prefab = Resources.Load(path);
+        Instantiate(prefab, transform.position, Quaternion.identity);
     }
 }

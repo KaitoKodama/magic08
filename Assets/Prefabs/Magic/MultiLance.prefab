@@ -11,10 +11,8 @@ GameObject:
   - component: {fileID: 3309293918241630611}
   - component: {fileID: 3309293918241630613}
   - component: {fileID: 3309293918241630610}
-  - component: {fileID: 3309293918241630615}
-  - component: {fileID: 3309293918241630612}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4764,31 +4762,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!135 &3309293918241630615
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3309293918241630608}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.06
-  m_Center: {x: 0.000039219856, y: 0.00016140938, z: 0.02}
---- !u!114 &3309293918241630612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3309293918241630608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea87c37e75fa264bb662e6dde49677f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3309293918968586026
 GameObject:
   m_ObjectHideFlags: 0
@@ -14358,10 +14331,8 @@ GameObject:
   - component: {fileID: 3309293919381936911}
   - component: {fileID: 3309293919381936897}
   - component: {fileID: 3309293919381936910}
-  - component: {fileID: 3309293919381936899}
-  - component: {fileID: 3309293919381936896}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19111,31 +19082,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!135 &3309293919381936899
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3309293919381936908}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.06
-  m_Center: {x: 0.00006866455, y: 0.00012755394, z: 0.02}
---- !u!114 &3309293919381936896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3309293919381936908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea87c37e75fa264bb662e6dde49677f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3309293919433508231
 GameObject:
   m_ObjectHideFlags: 0
@@ -28706,10 +28652,8 @@ GameObject:
   - component: {fileID: 3309293919721381946}
   - component: {fileID: 3309293919721381948}
   - component: {fileID: 3309293919721381949}
-  - component: {fileID: 3309293919721381950}
-  - component: {fileID: 3309293919721381951}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33459,31 +33403,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!135 &3309293919721381950
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3309293919721381947}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.06
-  m_Center: {x: 0.000079870224, y: -0.000033974648, z: 0.02}
---- !u!114 &3309293919721381951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3309293919721381947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea87c37e75fa264bb662e6dde49677f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3309293920176019952
 GameObject:
   m_ObjectHideFlags: 0
@@ -33495,10 +33414,8 @@ GameObject:
   - component: {fileID: 3309293920176019955}
   - component: {fileID: 3309293920176019957}
   - component: {fileID: 3309293920176019954}
-  - component: {fileID: 3309293920176019959}
-  - component: {fileID: 3309293920176019956}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38248,31 +38165,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!135 &3309293920176019959
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3309293920176019952}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.06
-  m_Center: {x: -0.00010848045, y: -0.00013518333, z: 0.02}
---- !u!114 &3309293920176019956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3309293920176019952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea87c37e75fa264bb662e6dde49677f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4202834042853925699
 GameObject:
   m_ObjectHideFlags: 0
@@ -43096,10 +42988,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.05
-  m_Height: 0.2720002
+  m_Radius: 0.32
+  m_Height: 1.44
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.27059078}
+  m_Center: {x: 0, y: 0, z: 0.03}
 --- !u!114 &4202834042853925700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43112,14 +43004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83bace9bc93e1b47b59fb70e24c85fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakEffect: {fileID: 4416668272308362415, guid: 1490326f33b2cfb47bbfc5839ecb5856,
-    type: 3}
   multiParent: {fileID: 3309293919433508230}
-  triggers:
-  - {fileID: 3309293918241630612}
-  - {fileID: 3309293919381936896}
-  - {fileID: 3309293920176019956}
-  - {fileID: 3309293919721381951}
   particles:
   - {fileID: 3309293918241630613}
   - {fileID: 3309293919381936897}

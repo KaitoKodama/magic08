@@ -15,9 +15,12 @@ MonoBehaviour:
   maxHp: 100
   maxMp: 1000
   refillSpeed: 1
-  enemyName: "\u30B9\u30B1\u30EB\u30C8\u30F3"
+  ownerName: "\u30B9\u30B1\u30EB\u30C8\u30F3"
   level: 1
   explain: "\u4F4E\u7D1A\u306E\u30E2\u30F3\u30B9\u30BF\u30FC\n\u77E5\u6027\u306F\u4F4E\u304F\u3001\u4F7F\u7528\u53EF\u80FD\u306A\u9B54\u6CD5\u3082\u3042\u307E\u308A\u306A\u3044\u3002"
   visualList:
   - {fileID: 11400000, guid: beb10824af1ee0b408170b427050f628, type: 2}
   - {fileID: 11400000, guid: e4b920a9cd99ac543b082a94763a7659, type: 2}
+  - {fileID: 11400000, guid: 6a5614e8d034e87418a3a238eb799ab4, type: 2}
+  - {fileID: 11400000, guid: 1320c0c1860856946b94ce57331ccde7, type: 2}
+  - {fileID: 11400000, guid: eaa4a9d1f8a0957488fb589e3777fb1a, type: 2}

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,6 +17,7 @@ public abstract class Enemy : Actor
     private readonly int DirectionZHash = Animator.StringToHash("DirectionZ");
 
     private FootSlide footSlide;
+    private Transform playerform;
     private Vector3 lastPosition;
 
 
@@ -28,7 +30,10 @@ public abstract class Enemy : Actor
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         footSlide = GetComponent<FootSlide>();
+        playerform = GameObject.FindWithTag("Player")?.transform;
     }
+
+    protected Transform AncherMagic => ancherMagic;
 
 
     //------------------------------------------
@@ -46,9 +51,8 @@ public abstract class Enemy : Actor
     //------------------------------------------
     // インターフェイス
     //------------------------------------------
-    protected override void OnApplyDamage(float damage)
+    public override void ApplyDamage(float damage)
     {
-        Locator<PlayerInput>.I?.OnVivration(0.1f, PlayerInput.VivrateHand.Holding);
         if (!IsDeath)
         {
             hp -= damage;
@@ -86,15 +90,15 @@ public abstract class Enemy : Actor
     {
         Transform origin;
         Vector3 destination;
-        float x = Random.Range(radius * -1, radius);
-        float z = Random.Range(radius * -1, radius);
+        float x = UnityEngine.Random.Range(radius * -1, radius);
+        float z = UnityEngine.Random.Range(radius * -1, radius);
         if (expect != null)
         {
             origin = expect;
         }
         else
         {
-            origin = IsPlayerExist ? Locator<Player>.I.transform : transform;
+            origin = IsPlayerExist ? playerform : transform;
         }
         destination.x = origin.position.x + x;
         destination.z = origin.position.z + z;
@@ -105,7 +109,7 @@ public abstract class Enemy : Actor
     {
         if (IsPlayerExist)
         {
-            var look = Locator<Player>.I.transform.position;
+            var look = playerform.position;
             look.y = transform.position.y;
             transform.LookAt(look, Vector3.up);
         }
@@ -139,45 +143,17 @@ public abstract class Enemy : Actor
             animator.SetFloat(DirectionXHash, 0);
         }
     }
-    protected void GenerateMagic()
-    {
-        var visual = GetRandomVisualset();
-        if (visual != null)
-        {
-            GenerateFromVisual(data.CharacterType, ancherMagic, visual);
-        }
-    }
-    protected void ExcuteMagic()
-    {
-        var visual = GetRandomVisualset();
-        if (visual != null && IsPlayerExist)
-        {
-            var pos = (Locator<Player>.I.transform.position - transform.position).normalized;
-            pos.y = 0;
-            ExcuteOrGenerateFromVisual(ancherMagic, visual, pos);
-        }
-    }
 
 
     //------------------------------------------
-    // 内部共有関数 - 戻り値あり
+    // 継承先共有関数 - 戻り値あり
     //------------------------------------------
-    private bool IsPlayerExist { get { return Locator<Player>.I != null; } }
-    private DataVisual GetRandomVisualset()
+    protected Transform Playerform => playerform;
+    protected bool IsPlayerExist { get { return playerform != null; } }
+    protected DataVisual GetRandomVisualset()
     {
         var data = this.data as EnemyData;
-        int index = Random.Range(0, data.VisualList.Count);
-        if (data.VisualList[index].RequireMP <= mp)
-        {
-            return data.VisualList[index];
-        }
-        foreach (var visual in data.VisualList)
-        {
-            if (visual.RequireMP <= mp)
-            {
-                return visual;
-            }
-        }
-        return null;
+        int index = UnityEngine.Random.Range(0, data.VisualList.Count);
+        return data.VisualList[index];
     }
 }

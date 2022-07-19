@@ -60,10 +60,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.05
-  m_Height: 0.2720002
+  m_Radius: 0.06
+  m_Height: 0.5
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.27059078}
+  m_Center: {x: 0, y: 0, z: 0.15}
 --- !u!114 &7646176305977058164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,8 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd92c8883c4c684d8742df524d61769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakEffect: {fileID: 4416668272308362415, guid: 1490326f33b2cfb47bbfc5839ecb5856,
-    type: 3}
   particle: {fileID: 7646176305962744343}
   gradiantSet:
     gradsList:
@@ -227,7 +225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7646176305977058165}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.04, z: 0.397}
+  m_LocalPosition: {x: 0, y: 0, z: 0.397}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7646176305976901459}

@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class UIMagicGrid : MonoBehaviour
+public class SelecterGrid : MonoBehaviour
 {
     [SerializeField] RectTransform boxrect = default;
     [SerializeField] Text textJa = default;
     [SerializeField] Text textEn = default;
 
-    private UIMagicSelecter selecter;
+    private Selecter selecter;
     private MagicData data;
 
 
@@ -31,7 +31,7 @@ public class UIMagicGrid : MonoBehaviour
     }
 
 
-    public void Init(UIMagicSelecter selecter, float degZ)
+    public void Init(Selecter selecter, float degZ)
     {
         transform.rotation = transform.rotation * Quaternion.Euler(new Vector3(0, 0, degZ));
         this.selecter = selecter;

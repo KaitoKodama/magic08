@@ -12,18 +12,15 @@ public class MagicBullet : Magic
 
     private void Update()
     {
-        if (!IsExcute)
-        {
-            OnChaseToTarget();
-        }
+        UpdateChaseIfNotExcute();
     }
     private void OnTriggerEnter(Collider other)
     {
-        IApplyDamageTrigger(other);
+        TriggerBranch(other, Data.Value);
     }
 
 
-    protected override void Generate(CharacterType character, DataVisual data, Transform origin)
+    protected override void Generate(DataVisual data, Transform origin)
     {
         var co = core.colorOverLifetime;
         var ri = ring.colorOverLifetime;
@@ -34,10 +31,5 @@ public class MagicBullet : Magic
     protected override void Excute(Vector3 expect)
     {
         OnForceToRigidWithLifeTime(expect);
-    }
-    protected override void Destroy()
-    {
-        InstantinateResorces("Hit01");
-        Destroy(this.gameObject);
     }
 }

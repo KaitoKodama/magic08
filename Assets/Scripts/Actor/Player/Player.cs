@@ -6,7 +6,10 @@ using State = StateMachine<Player>.State;
 
 public class Player : Actor
 {
+    [SerializeField] HPUI hpui = default;
     [SerializeField] Staff staff = default;
+    [SerializeField] Logger logger = default;
+    [SerializeField] Selecter selecter = default;
     [SerializeField] float moveSpeed = 1f;
 
     private OVRPlayerController controller;
@@ -19,13 +22,10 @@ public class Player : Actor
     //------------------------------------------
     // Unityランタイム
     //------------------------------------------
-    private void Awake()
-    {
-        Locator<Player>.Bind(this);
-    }
     private new void Start()
     {
         base.Start();
+
         controller = GetComponent<OVRPlayerController>();
         controller.SetMoveScaleMultiplier(moveSpeed);
         stateMachine = new StateMachine<Player>(this);
@@ -34,11 +34,9 @@ public class Player : Actor
     private new void Update()
     {
         base.Update();
+
+        hpui.UpdateStatePanel(data, hp, mp);
         stateMachine.Update();
-    }
-    private void OnDestroy()
-    {
-        Locator<Player>.Unbind(this);
     }
 
 
@@ -52,25 +50,29 @@ public class Player : Actor
         rotateIndex = Mathf.Clamp(rotateIndex + add, 0, rotates.Length - 1);
         controller.RotationRatchet = rotates[rotateIndex];
     }
-    public void GenerateMagic(Transform origin, DataVisual visual)
+
+
+    //------------------------------------------
+    // 外部共有継承関数
+    //------------------------------------------
+    public override void ApplyDamage(float damage)
     {
-        GenerateFromVisual(data.CharacterType, origin, visual);
+        hp -= damage;
     }
 
 
     //------------------------------------------
     // 内部共有関数
     //------------------------------------------
-    private void UpdateStaffLocater()
+    private void UpdateStaffAndSelecterState()
     {
         var input = Locator<PlayerInput>.I;
-        float gripAmount = input.GetIndex() + input.GetTrigger();
-        float gripAmountRequire = 1.5f;
-        if (gripAmount >= gripAmountRequire)
+        if (input.GetIndex() + input.GetTrigger() >= 1.5f)
         {
             if (!IsStaffHolding)
             {
                 staff.OnGrabState(true, input.StaffHoldAncher);
+                selecter.SetSelecterState(true);
                 IsStaffHolding = true;
             }
         }
@@ -79,6 +81,7 @@ public class Player : Actor
             if (IsStaffHolding)
             {
                 staff.OnGrabState(false);
+                selecter.SetSelecterState(false);
                 IsStaffHolding = false;
             }
         }
@@ -90,35 +93,41 @@ public class Player : Actor
             var input = Locator<PlayerInput>.I;
             if (input.IsTrigger(true))
             {
-                staff.RequestToSwapOrAnimateBegin(false);
+                selecter.SetGridContentsOrGenerate(OnGenerateCallback);
             }
-            if (EnableMagic)
+            if (input.IsIndex(true))
             {
-                if (input.IsIndex(true))
-                {
-                    TryExcuteMagic(staff.Tips.forward);
-                    staff.RequestToSwapOrAnimateBegin(true);
-                    input.OnVivration(0.1f, PlayerInput.VivrateHand.Holding);
-                }
+                TryExcuteIfEnable();
             }
         }
-        else
-        {
-            if (EnableMagic)
-            {
-                TryExcuteMagic(staff.Tips.forward);
-                staff.RequestToSwapOrAnimateBegin(true);
-            }
-        }
+        else TryExcuteIfEnable();
     }
-
-
-    //------------------------------------------
-    // インターフェイス
-    //------------------------------------------
-    protected override void OnApplyDamage(float damage)
+    private void OnGenerateCallback(DataVisual visual)
     {
-        Debug.Log($"Hit To Actor {damage}");
+        if (EnableMagic == null)
+        {
+            RequestGenerate(staff.Tips, visual, OnCompleted, OnFailed);
+        }
+        else logger.Log($"連続で発動準備は行えません\n{EnableMagic.Data.NameJa}の発動を完了させてください");
+        selecter.SetGridContents();
+    }
+    private void OnCompleted(DataVisual visual)
+    {
+        logger.Log($"{EnableMagic.Data.NameJa}の発動準備を完了しました");
+    }
+    private void OnFailed(DataVisual visual)
+    {
+        logger.Log($"{visual.NameJa}の発動準備に十分な魔力がありません\n回復を待つかほかの魔法を使用してください");
+    }
+    private void TryExcuteIfEnable()
+    {
+        if (EnableMagic)
+        {
+            var input = Locator<PlayerInput>.I;
+            staff.OnShootAnimation();
+            RequestExcute(staff.Tips.forward);
+            input.OnVivration(0.1f, PlayerInput.VivrateHand.Holding);
+        }
     }
 
 
@@ -133,7 +142,7 @@ public class Player : Actor
     {
         protected override void OnUpdate()
         {
-            owner.UpdateStaffLocater();
+            owner.UpdateStaffAndSelecterState();
             owner.UpdateSelecterRequest();
         }
     }

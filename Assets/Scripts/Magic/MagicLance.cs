@@ -11,18 +11,15 @@ public class MagicLance : Magic
 
     private void Update()
     {
-        if (!IsExcute)
-        {
-            OnLerpToTarget();
-        }
+        UpdateLerpIfNotExcute();
     }
     private void OnTriggerEnter(Collider other)
     {
-        IApplyDamageTrigger(other);
+        TriggerBranch(other, Data.Value);
     }
 
 
-    protected override void Generate(CharacterType character, DataVisual data, Transform origin)
+    protected override void Generate(DataVisual data, Transform origin)
     {
         var col = particle.colorOverLifetime;
         col.color = gradiantSet.GetGradient(data.Attribute);
@@ -31,10 +28,5 @@ public class MagicLance : Magic
     {
         transform.forward = expect;
         OnForceToRigidWithLifeTime(expect);
-    }
-    protected override void Destroy()
-    {
-        InstantinateResorces("Hit02");
-        Destroy(this.gameObject);
     }
 }

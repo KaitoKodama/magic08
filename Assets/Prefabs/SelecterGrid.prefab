@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 1365094328131538490}
   - component: {fileID: 72438856094349546}
   m_Layer: 0
-  m_Name: MagicButton
+  m_Name: SelecterGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

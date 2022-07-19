@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class Skelton : Enemy
 {
-    private EnemyHPBar hpBar;
+    private HPUI hpui;
     private StateMachine<Skelton> stateMachine;
 
     private readonly int IsAttack01Hash = Animator.StringToHash("IsAttack01");
@@ -20,7 +20,7 @@ public class Skelton : Enemy
     private new void Start()
     {
         base.Start();
-        hpBar = GetComponentInChildren<EnemyHPBar>();
+        hpui = GetComponentInChildren<HPUI>();
 
         stateMachine = new StateMachine<Skelton>(this);
         stateMachine.AddTransition<StateAttack, StateChase>(((int)Event.Chase));
@@ -36,7 +36,7 @@ public class Skelton : Enemy
     private new void Update()
     {
         base.Update();
-        hpBar.UpdateStatePanel(data, hp, mp);
+        hpui.UpdateStatePanel(data, hp, mp);
         stateMachine.Update();
     }
 
@@ -44,9 +44,9 @@ public class Skelton : Enemy
     //------------------------------------------
     // インターフェイス
     //------------------------------------------
-    protected override void OnApplyDamage(float damage)
+    public override void ApplyDamage(float damage)
     {
-        base.OnApplyDamage(damage);
+        base.ApplyDamage(damage);
         int index = IsDeath ? ((int)Event.Death) : ((int)Event.Damage);
         stateMachine.Dispatch(index);
     }
@@ -61,7 +61,12 @@ public class Skelton : Enemy
     }
     public void OnExcute()
     {
-        ExcuteMagic();
+        if (IsPlayerExist)
+        {
+            var pos = (Playerform.position - transform.position).normalized;
+            pos.y = 0;
+            RequestExcute(pos);
+        }
     }
 
 
@@ -82,14 +87,22 @@ public class Skelton : Enemy
         {
             if (owner.IsInDestination())
             {
-                int index = (owner.IsEnableAttack) ? ((int)Event.Attack) : ((int)Event.Chase);
-                stateMachine.Dispatch(index);
+                var visual = owner.GetRandomVisualset();
+                owner.RequestGenerate(owner.AncherMagic, visual, OnCompletedCallback, OnFailedCallback);
             }
             else
             {
                 owner.UpdateRotation();
                 owner.UpdateLocomotion();
             }
+        }
+        private void OnCompletedCallback(DataVisual visual)
+        {
+            stateMachine.Dispatch(((int)Event.Attack));
+        }
+        private void OnFailedCallback(DataVisual visual)
+        {
+            stateMachine.Dispatch(((int)Event.Chase));
         }
     }
     private class StateAttack : State
@@ -98,7 +111,6 @@ public class Skelton : Enemy
         {
             owner.agent.isStopped = true;
             owner.animator.SetBool(owner.IsAttack01Hash, true);
-            owner.GenerateMagic();
         }
         protected override void OnExit(State nextState)
         {
