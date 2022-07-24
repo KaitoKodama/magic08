@@ -14291,6 +14291,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakEffect: {fileID: 4416668272308362415, guid: 1490326f33b2cfb47bbfc5839ecb5856,
     type: 3}
+  hitEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b,
+    type: 3}
   core: {fileID: 5469680171256987063}
   ring: {fileID: 5469680171256987061}
   gradiantSet:

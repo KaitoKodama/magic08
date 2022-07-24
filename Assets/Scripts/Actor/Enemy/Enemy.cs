@@ -4,19 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent), typeof(Animator), typeof(FootSlide))]
+[RequireComponent(typeof(NavMeshAgent), typeof(Animator))]
 public abstract class Enemy : Actor
 {
     [SerializeField]
     private Transform ancherMagic = default;
-    protected NavMeshAgent agent;
-    protected Animator animator;
-    protected int attackInedx;
+
+    private NavMeshAgent agent;
+    private Animator animator;
 
     private readonly int DirectionXHash = Animator.StringToHash("DirectionX");
     private readonly int DirectionZHash = Animator.StringToHash("DirectionZ");
 
-    private FootSlide footSlide;
     private Transform playerform;
     private Vector3 lastPosition;
 
@@ -29,7 +28,6 @@ public abstract class Enemy : Actor
         base.Start();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        footSlide = GetComponent<FootSlide>();
         playerform = GameObject.FindWithTag("Player")?.transform;
     }
 
@@ -69,6 +67,8 @@ public abstract class Enemy : Actor
     //------------------------------------------
     // 継承先共有関数 - 戻り値あり
     //------------------------------------------
+    protected Animator Animator => animator;
+    protected NavMeshAgent Agent => agent;
     protected bool IsInDestination(float radius = 0.01f)
     {
         if (agent != null)
@@ -123,8 +123,6 @@ public abstract class Enemy : Actor
 
         animator.SetFloat(DirectionXHash, local3D.x);
         animator.SetFloat(DirectionZHash, local3D.z);
-        footSlide.SetFootSpeed(agent.velocity);
-
         lastPosition = current;
     }
     protected void SetVHHashToOneDirection()

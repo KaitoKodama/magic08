@@ -15,7 +15,8 @@ public class MagicMultiLance : Magic
     }
     private void OnTriggerEnter(Collider other)
     {
-        TriggerBranch(other, Data.Value);
+        OnTriggerActor(other, Data.Value, OnTriggerActorCompleted);
+        OnTriggerField(other, OnTriggerFieldCompleted);
     }
 
 
@@ -27,7 +28,7 @@ public class MagicMultiLance : Magic
     {
         SetSimulateSpeed(5);
         transform.forward = expect;
-        OnForceToRigidWithLifeTime(expect, 3);
+        SetRigidVelocity(expect, 3f);
     }
 
 
@@ -38,5 +39,14 @@ public class MagicMultiLance : Magic
             var pt = particle.main;
             pt.simulationSpeed = speed;
         }
+    }
+    private void OnTriggerActorCompleted()
+    {
+        SetDamageBox(transform.position, Data.Value);
+        SetHitEffect();
+    }
+    private void OnTriggerFieldCompleted()
+    {
+        SetBreakEffect();
     }
 }

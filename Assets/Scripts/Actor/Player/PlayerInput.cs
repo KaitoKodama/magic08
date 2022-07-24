@@ -6,19 +6,14 @@ using CMN;
 
 public class PlayerInput : MonoBehaviour
 {
-    [SerializeField] Transform staffLeftAncher = default;
-    [SerializeField] Transform staffRightAncher = default;
-    [SerializeField] StaffHoldingHand staffHoldingHand = default;
-
-    private Transform staffHandAncher;
-    private OVRInput.Controller staffHoldController;
-    private OVRInput.Controller staffHoldInverseController;
+    [SerializeField] Transform staffHoldAncher = default;
+    private OVRInput.Controller staffHoldController = OVRInput.Controller.LTouch;
+    private OVRInput.Controller staffHoldInverseController = OVRInput.Controller.RTouch;
 
 
-    private void Start()
+    private void Awake()
     {
         Locator<PlayerInput>.Bind(this);
-        SetStaffHoldingHand(staffHoldingHand);
     }
     private void OnDestroy()
     {
@@ -27,7 +22,7 @@ public class PlayerInput : MonoBehaviour
 
 
     public enum VivrateHand { Holding, Left, Right, Both, }
-    public Transform StaffHoldAncher => staffHandAncher;
+    public Transform StaffHoldAncher => staffHoldAncher;
     public bool IsTrigger(bool inverse = false)
     {
         return OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, GetController(inverse));
@@ -51,16 +46,6 @@ public class PlayerInput : MonoBehaviour
     public float GetIndex(bool inverse = false)
     {
         return OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, GetController(inverse));
-    }
-    
-    public void SetStaffHoldingHand(StaffHoldingHand expectHand)
-    {
-        staffHoldingHand = expectHand;
-        var staffAncher = (staffHoldingHand == StaffHoldingHand.LeftHand) ? staffLeftAncher : staffRightAncher;
-        staffHandAncher = staffAncher;
-
-        staffHoldController = Utility.GetEnableOVRController(staffHoldingHand);
-        staffHoldInverseController = Utility.GetEnableOVRController(staffHoldingHand, true);
     }
     public void OnVivration(float time, VivrateHand vivrate)
     {

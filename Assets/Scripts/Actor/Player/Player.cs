@@ -8,15 +8,11 @@ public class Player : Actor
 {
     [SerializeField] HPUI hpui = default;
     [SerializeField] Staff staff = default;
-    [SerializeField] Logger logger = default;
     [SerializeField] Selecter selecter = default;
     [SerializeField] float moveSpeed = 1f;
 
     private OVRPlayerController controller;
     private StateMachine<Player> stateMachine;
-
-    private float[] rotates = new float[] { 5f, 22.5f, 45f, 90f, };
-    private int rotateIndex = 2;
 
 
     //------------------------------------------
@@ -43,13 +39,7 @@ public class Player : Actor
     //------------------------------------------
     // 外部共有関数
     //------------------------------------------
-    public float Rotate { get { return rotates[rotateIndex]; } }
     public bool IsStaffHolding { get; private set; } = false;
-    public void SetActorRotate(int add)
-    {
-        rotateIndex = Mathf.Clamp(rotateIndex + add, 0, rotates.Length - 1);
-        controller.RotationRatchet = rotates[rotateIndex];
-    }
 
 
     //------------------------------------------
@@ -108,16 +98,16 @@ public class Player : Actor
         {
             RequestGenerate(staff.Tips, visual, OnCompleted, OnFailed);
         }
-        else logger.Log($"連続で発動準備は行えません\n{EnableMagic.Data.NameJa}の発動を完了させてください");
+        else Locator<Logger>.I.Log($"連続で発動準備は行えません\n{EnableMagic.Data.NameJa}の発動を完了させてください");
         selecter.SetGridContents();
     }
     private void OnCompleted(DataVisual visual)
     {
-        logger.Log($"{EnableMagic.Data.NameJa}の発動準備を完了しました");
+        Locator<Logger>.I.Log($"{EnableMagic.Data.NameJa}の発動準備を完了しました");
     }
     private void OnFailed(DataVisual visual)
     {
-        logger.Log($"{visual.NameJa}の発動準備に十分な魔力がありません\n回復を待つかほかの魔法を使用してください");
+        Locator<Logger>.I.Log($"{visual.NameJa}の発動準備に十分な魔力がありません\n回復を待つかほかの魔法を使用してください");
     }
     private void TryExcuteIfEnable()
     {

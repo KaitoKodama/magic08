@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using MagicContext;
 
 public abstract class Magic : MonoBehaviour
 {
@@ -19,13 +16,13 @@ public abstract class Magic : MonoBehaviour
         this.data = data;
         this.owner = owner;
         TrackTarget = origin;
-        transform.position = TrackTarget.position;
+        transform.position = origin.position;
         Generate(data, origin);
     }
     public void OnExcute(Vector3 expect)
     {
-        IsExcute = true;
         Excute(expect);
+        IsExcute = true;
     }
 
 
@@ -33,22 +30,15 @@ public abstract class Magic : MonoBehaviour
     // 継承先共有抽象関数
     //------------------------------------------
     protected virtual void Generate(DataVisual data, Transform origin) { }
-    protected abstract void Excute(Vector3 expect);
+    protected virtual void Excute(Vector3 expect) { }
 
 
     //------------------------------------------
     // 継承先共有関数 - 戻り値あり
     //------------------------------------------
+    protected Actor Owner => owner;
     protected Transform TrackTarget { get; private set; }
     protected bool IsExcute { get; private set; } = false;
-    protected bool IsSameTypeActor(Actor compare)
-    {
-        if (owner.GetType() == compare.GetType())
-        {
-            return true;
-        }
-        return false;
-    }
 
 
     //------------------------------------------
@@ -71,57 +61,73 @@ public abstract class Magic : MonoBehaviour
             transform.forward = TrackTarget.forward;
         }
     }
-    protected void OnForceToRigidWithLifeTime(Vector3 expect, float speed = 5f, float lifeTime = 10f)
+    protected void SetHitEffect(bool destroy = true)
     {
-        var rigid = GetComponent<Rigidbody>();
-        rigid.velocity = expect * speed;
-        Destroy(this.gameObject, lifeTime);
-    }
-    protected void TriggerBranch(Collider col, float damage)
-    {
-        TryTriggerTreatOfActor(col, damage);
-        if (IsExcute)
+        var effect = Locator<PoolEffect>.I;
+        if (effect != null)
         {
-            TryTriggerTreatOfField(col);
+            var pool = effect.GetHitPool();
+            if (pool != null)
+            {
+                pool.transform.position = transform.position;
+            }
+        }
+        if (destroy) Destroy(this.gameObject);
+    }
+    protected void SetDamageBox(Vector3 startPos, float damage)
+    {
+        var effect = Locator<PoolEffect>.I;
+        if (effect != null)
+        {
+            effect.SetDamageText(startPos, damage);
         }
     }
-
-
-    //------------------------------------------
-    // 内部共有関数 - 戻り値なし
-    //------------------------------------------
-    private void TryTriggerTreatOfActor(Collider col, float damage)
+    protected void SetBreakEffect(bool destroy = true)
+    {
+        var effect = Locator<PoolEffect>.I;
+        if (effect != null)
+        {
+            var pool = effect.GetBreakPool();
+            if (pool != null)
+            {
+                pool.transform.position = transform.position;
+            }
+        }
+        if (destroy) Destroy(this.gameObject);
+    }
+    protected void SetRigidVelocity(Vector3 expect, float speed = 5f)
+    {
+        var rigid = GetComponent<Rigidbody>();
+        if (rigid != null)
+        {
+            rigid.velocity = expect * speed;
+        }
+    }
+    protected void OnTriggerActor(Collider col, float damage, Action completed = null)
     {
         var target = col.gameObject.GetComponent<Actor>();
         if (target != null)
         {
-            if (!IsSameTypeActor(target))
+            if (owner.GetType() != target.GetType())
             {
                 target.ApplyDamage(damage);
-                InstanceateFromResorces("Prefabs/Hit01");
                 if (target.GetComponent<Enemy>())
                 {
                     Locator<PlayerInput>.I.OnVivration(0.1f, PlayerInput.VivrateHand.Holding);
                 }
-                Destroy(this.gameObject);
+                if (completed != null) completed();
             }
         }
     }
-    private void TryTriggerTreatOfField(Collider col)
+    protected void OnTriggerField(Collider col, Action completed = null)
     {
         if (col.gameObject.CompareTag("Field"))
         {
-            InstanceateFromResorces("Prefabs/BreakEffect");
-            if (owner.GetType() == typeof(Player) && owner.EnableMagic)
+            if (owner.GetType() == typeof(Player) && owner.EnableMagic != null)
             {
                 Locator<PlayerInput>.I.OnVivration(0.1f, PlayerInput.VivrateHand.Holding);
             }
-            Destroy(this.gameObject);
+            if (completed != null) completed();
         }
-    }
-    private void InstanceateFromResorces(string path)
-    {
-        var prefab = Resources.Load(path);
-        Instantiate(prefab, transform.position, Quaternion.identity);
     }
 }

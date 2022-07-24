@@ -43,7 +43,7 @@ namespace Controller
 			rigTarget.rotation = vrTarget.rotation * Quaternion.Euler(rot);
 		}
 	}
-	public enum StaffHoldingHand { LeftHand, RightHand }
+	//public enum StaffHoldingHand { LeftHand, RightHand }
 }
 
 
@@ -165,18 +165,18 @@ namespace CMN
 			else if (fProbabilityRate < fPercent) return true;
 			else return false;
 		}
-		public static OVRInput.Controller GetEnableOVRController(StaffHoldingHand holdingHand, bool inverse = false)
-		{
-			OVRInput.Controller controller;
-			if (!inverse)
-			{
-				controller = (holdingHand == StaffHoldingHand.LeftHand) ? OVRInput.Controller.LTouch : OVRInput.Controller.RTouch;
-			}
-			else
-			{
-				controller = (holdingHand == StaffHoldingHand.LeftHand) ? OVRInput.Controller.RTouch : OVRInput.Controller.LTouch;
-			}
-			return controller;
-		}
+		//public static OVRInput.Controller GetEnableOVRController(StaffHoldingHand holdingHand, bool inverse = false)
+		//{
+		//	OVRInput.Controller controller;
+		//	if (!inverse)
+		//	{
+		//		controller = (holdingHand == StaffHoldingHand.LeftHand) ? OVRInput.Controller.LTouch : OVRInput.Controller.RTouch;
+		//	}
+		//	else
+		//	{
+		//		controller = (holdingHand == StaffHoldingHand.LeftHand) ? OVRInput.Controller.RTouch : OVRInput.Controller.LTouch;
+		//	}
+		//	return controller;
+		//}
 	}
 }

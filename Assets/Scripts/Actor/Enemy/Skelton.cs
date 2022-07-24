@@ -6,7 +6,11 @@ using DG.Tweening;
 
 public class Skelton : Enemy
 {
+    [SerializeField]
+    private AudioClip[] footSounds = default;
     private HPUI hpui;
+    private FootSlide footSlide;
+    private AudioSource audioSource;
     private StateMachine<Skelton> stateMachine;
 
     private readonly int IsAttack01Hash = Animator.StringToHash("IsAttack01");
@@ -20,6 +24,8 @@ public class Skelton : Enemy
     private new void Start()
     {
         base.Start();
+        footSlide = GetComponent<FootSlide>();
+        audioSource = GetComponent<AudioSource>();
         hpui = GetComponentInChildren<HPUI>();
 
         stateMachine = new StateMachine<Skelton>(this);
@@ -59,6 +65,12 @@ public class Skelton : Enemy
     {
         stateMachine.Dispatch(((int)Event.Chase));
     }
+    public void OnFootStep()
+    {
+        int index = Random.Range(0, footSounds.Length - 1);
+        var clip = footSounds[index];
+        audioSource.PlayOneShot(clip);
+    }
     public void OnExcute()
     {
         if (IsPlayerExist)
@@ -90,11 +102,9 @@ public class Skelton : Enemy
                 var visual = owner.GetRandomVisualset();
                 owner.RequestGenerate(owner.AncherMagic, visual, OnCompletedCallback, OnFailedCallback);
             }
-            else
-            {
-                owner.UpdateRotation();
-                owner.UpdateLocomotion();
-            }
+            owner.UpdateRotation();
+            owner.UpdateLocomotion();
+            owner.footSlide.SetFootSpeed(owner.Agent.velocity);
         }
         private void OnCompletedCallback(DataVisual visual)
         {
@@ -109,39 +119,45 @@ public class Skelton : Enemy
     {
         protected override void OnEnter(State prevState)
         {
-            owner.agent.isStopped = true;
-            owner.animator.SetBool(owner.IsAttack01Hash, true);
+            owner.Agent.isStopped = true;
+            owner.Animator.SetBool(owner.IsAttack01Hash, true);
+        }
+        protected override void OnUpdate()
+        {
+            owner.UpdateRotation();
         }
         protected override void OnExit(State nextState)
         {
-            owner.agent.isStopped = false;
-            owner.animator.SetBool(owner.IsAttack01Hash, false);
+            owner.Agent.isStopped = false;
+            owner.Animator.SetBool(owner.IsAttack01Hash, false);
         }
     }
     private class StateDamage : State
     {
         protected override void OnEnter(State prevState)
         {
-            owner.agent.isStopped = true;
-            owner.animator.SetBool(owner.IsDamageHash, true);
+            owner.Agent.isStopped = true;
+            owner.Animator.SetBool(owner.IsDamageHash, true);
         }
         protected override void OnExit(State nextState)
         {
-            owner.agent.isStopped = false;
-            owner.animator.SetBool(owner.IsDamageHash, false);
+            owner.Agent.isStopped = false;
+            owner.Animator.SetBool(owner.IsDamageHash, false);
         }
     }
     private class StateDeath : State
     {
         protected override void OnEnter(State prevState)
         {
-            owner.agent.isStopped = true;
-            owner.agent.enabled = false;
+            Locator<Logger>.I.Log($"{owner.data.OwnerName}を討伐しました");
+
+            owner.Agent.isStopped = true;
+            owner.Agent.enabled = false;
             owner.gameObject.GetComponent<FootIK>().enabled = false;
             owner.gameObject.GetComponent<Collider>().enabled = false;
 
             owner.SetVHHashToOneDirection();
-            owner.animator.SetBool(owner.IsDeathHash, true);
+            owner.Animator.SetBool(owner.IsDeathHash, true);
 
             owner.GetComponent<MeshDissolver>().OnDissolveEntry(0.3f, 5f, () =>
             {

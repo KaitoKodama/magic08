@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class Actor : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
     protected ActorData data = default;
     protected float hp, mp;
 
@@ -68,7 +68,10 @@ public abstract class Actor : MonoBehaviour
     }
     protected void RequestExcute(Vector3 expect)
     {
-        EnableMagic?.OnExcute(expect);
-        EnableMagic = null;
+        if (EnableMagic != null)
+        {
+            EnableMagic.OnExcute(expect);
+            EnableMagic = null;
+        }
     }
 }

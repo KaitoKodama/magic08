@@ -12,6 +12,10 @@ public class Logger : MonoBehaviour
     private bool isShowing = false;
 
 
+    private void Awake()
+    {
+        Locator<Logger>.Bind(this);
+    }
     private void Update()
     {
         if (isShowing)
@@ -25,6 +29,11 @@ public class Logger : MonoBehaviour
             }
         }
     }
+    private void OnDestroy()
+    {
+        Locator<Logger>.Unbind(this);
+    }
+
 
     public void Log(string text)
     {

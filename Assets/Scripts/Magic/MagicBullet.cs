@@ -16,7 +16,8 @@ public class MagicBullet : Magic
     }
     private void OnTriggerEnter(Collider other)
     {
-        TriggerBranch(other, Data.Value);
+        OnTriggerActor(other, Data.Value, OnTriggerActorCompleted);
+        OnTriggerField(other, OnTriggerFieldCompleted);
     }
 
 
@@ -30,6 +31,17 @@ public class MagicBullet : Magic
     }
     protected override void Excute(Vector3 expect)
     {
-        OnForceToRigidWithLifeTime(expect);
+        SetRigidVelocity(expect);
+    }
+
+
+    private void OnTriggerActorCompleted()
+    {
+        SetDamageBox(transform.position, Data.Value);
+        SetHitEffect();
+    }
+    private void OnTriggerFieldCompleted()
+    {
+        SetBreakEffect();
     }
 }

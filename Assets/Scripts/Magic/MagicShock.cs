@@ -13,6 +13,11 @@ public class MagicShock : Magic
     {
         UpdateChaseIfNotExcute();
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        OnTriggerActor(other, Data.Value, OnTriggerActorCompleted);
+        OnTriggerField(other, OnTriggerFieldCompleted);
+    }
 
 
     protected override void Generate(DataVisual data, Transform origin)
@@ -22,6 +27,17 @@ public class MagicShock : Magic
     }
     protected override void Excute(Vector3 expect)
     {
-        OnForceToRigidWithLifeTime(expect);
+        SetRigidVelocity(expect);
+    }
+
+
+    private void OnTriggerActorCompleted()
+    {
+        SetDamageBox(transform.position, Data.Value);
+        SetHitEffect();
+    }
+    private void OnTriggerFieldCompleted()
+    {
+        SetBreakEffect();
     }
 }

@@ -4799,3 +4799,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakEffect: {fileID: 4416668272308362415, guid: 1490326f33b2cfb47bbfc5839ecb5856,
     type: 3}
+  hitEffect: {fileID: 5024009746357069194, guid: ec3f674830402cc45bce805cf6493db7,
+    type: 3}
