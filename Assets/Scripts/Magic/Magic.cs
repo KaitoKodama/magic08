@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Magic : MonoBehaviour
@@ -31,6 +34,8 @@ public abstract class Magic : MonoBehaviour
     //------------------------------------------
     protected virtual void Generate(DataVisual data, Transform origin) { }
     protected virtual void Excute(Vector3 expect) { }
+    protected virtual void OnTriggerActorCompleted(Actor actor) { }
+    protected virtual void OnTriggerFieldCompleted() { }
 
 
     //------------------------------------------
@@ -44,6 +49,13 @@ public abstract class Magic : MonoBehaviour
     //------------------------------------------
     // 継承先共有関数 - 戻り値なし
     //------------------------------------------
+    protected void CloningGenerate<T>(GameObject prefab) where T : Magic
+    {
+        var obj = Instantiate(prefab, transform.position, Quaternion.identity);
+        var magic = obj.GetComponent<T>();
+        magic.OnGenerate(Owner, Data, transform);
+        magic.OnExcute(default);
+    }
     protected void UpdateLerpIfNotExcute(float speed = 3f)
     {
         if (!IsExcute)
@@ -82,7 +94,7 @@ public abstract class Magic : MonoBehaviour
             effect.SetDamageText(startPos, damage);
         }
     }
-    protected void SetBreakEffect(bool destroy = true)
+    protected void SetBreakEffect()
     {
         var effect = Locator<PoolEffect>.I;
         if (effect != null)
@@ -93,7 +105,6 @@ public abstract class Magic : MonoBehaviour
                 pool.transform.position = transform.position;
             }
         }
-        if (destroy) Destroy(this.gameObject);
     }
     protected void SetRigidVelocity(Vector3 expect, float speed = 5f)
     {
@@ -103,23 +114,22 @@ public abstract class Magic : MonoBehaviour
             rigid.velocity = expect * speed;
         }
     }
-    protected void OnTriggerActor(Collider col, float damage, Action completed = null)
+    protected void OnTriggerActor(Collider col)
     {
         var target = col.gameObject.GetComponent<Actor>();
         if (target != null)
         {
             if (owner.GetType() != target.GetType())
             {
-                target.ApplyDamage(damage);
                 if (target.GetComponent<Enemy>())
                 {
                     Locator<PlayerInput>.I.OnVivration(0.1f, PlayerInput.VivrateHand.Holding);
                 }
-                if (completed != null) completed();
+                OnTriggerActorCompleted(target);
             }
         }
     }
-    protected void OnTriggerField(Collider col, Action completed = null)
+    protected void OnTriggerField(Collider col)
     {
         if (col.gameObject.CompareTag("Field"))
         {
@@ -127,7 +137,7 @@ public abstract class Magic : MonoBehaviour
             {
                 Locator<PlayerInput>.I.OnVivration(0.1f, PlayerInput.VivrateHand.Holding);
             }
-            if (completed != null) completed();
+            OnTriggerFieldCompleted();
         }
     }
 }

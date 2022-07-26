@@ -49,7 +49,7 @@ public abstract class Enemy : Actor
     //------------------------------------------
     // インターフェイス
     //------------------------------------------
-    public override void ApplyDamage(float damage)
+    public override void ApplyDamage(Transform transform, float damage)
     {
         if (!IsDeath)
         {

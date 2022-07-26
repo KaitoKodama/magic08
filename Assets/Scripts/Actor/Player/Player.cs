@@ -45,7 +45,7 @@ public class Player : Actor
     //------------------------------------------
     // ŠO•”‹¤—LŒp³ŠÖ”
     //------------------------------------------
-    public override void ApplyDamage(float damage)
+    public override void ApplyDamage(Transform transform, float damage)
     {
         hp -= damage;
     }

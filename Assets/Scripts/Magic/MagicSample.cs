@@ -10,8 +10,8 @@ public class MagicSample : Magic
     }
     private void OnTriggerEnter(Collider other)
     {
-        OnTriggerActor(other, Data.Value, OnTriggerActorCompleted);
-        OnTriggerField(other, OnTriggerFieldCompleted);
+        OnTriggerActor(other);
+        OnTriggerField(other);
     }
 
 
@@ -21,13 +21,15 @@ public class MagicSample : Magic
     }
 
 
-    private void OnTriggerActorCompleted()
+    protected override void OnTriggerActorCompleted(Actor actor)
     {
+        actor.ApplyDamage(transform, Data.Value);
         SetDamageBox(transform.position, Data.Value);
         SetHitEffect();
     }
-    private void OnTriggerFieldCompleted()
+    protected override void OnTriggerFieldCompleted()
     {
         SetBreakEffect();
+        Destroy(this.gameObject);
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameJa: "\u708E\u9663"
   nameEn: Flame area
-  prefab: {fileID: -228419627816898974, guid: 0728271341debab4887efa8dfa581fb9, type: 3}
+  prefab: {fileID: 3222190802133541193, guid: 6767466ffdad60a49b782c9d9f6e29e0, type: 3}
   value: 52.5
   requireMP: 35
   explain: "\u708E\u3092\u64CD\u308A\u3001\u8FBA\u308A\u3092\u708E\u306E\u30D5\u30A3\u30FC\u30EB\u30C9\u3078\u3068\u5909\u3048\u308B\u3002"

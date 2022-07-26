@@ -50,9 +50,9 @@ public class Skelton : Enemy
     //------------------------------------------
     // インターフェイス
     //------------------------------------------
-    public override void ApplyDamage(float damage)
+    public override void ApplyDamage(Transform transform, float damage)
     {
-        base.ApplyDamage(damage);
+        base.ApplyDamage(transform, damage);
         int index = IsDeath ? ((int)Event.Death) : ((int)Event.Damage);
         stateMachine.Dispatch(index);
     }
@@ -75,9 +75,7 @@ public class Skelton : Enemy
     {
         if (IsPlayerExist)
         {
-            var pos = (Playerform.position - transform.position).normalized;
-            pos.y = 0;
-            RequestExcute(pos);
+            RequestExcute(transform.forward);
         }
     }
 

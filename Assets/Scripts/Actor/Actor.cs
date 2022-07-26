@@ -33,7 +33,7 @@ public abstract class Actor : MonoBehaviour
     //------------------------------------------
     // 外部共有抽象関数
     //------------------------------------------
-    public abstract void ApplyDamage(float damage);
+    public abstract void ApplyDamage(Transform transform, float damage);
 
 
     //------------------------------------------

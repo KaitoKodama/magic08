@@ -4,38 +4,22 @@ using UnityEngine;
 
 public class MagicCircle : Magic
 {
-    private int count;
-    private float time;
-    private int triggerCount = 3;
-    private float destroyTime = 2f;
+    private bool isEnter = false;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (count <= triggerCount)
+        if (!isEnter)
         {
-            var target = other.gameObject.GetComponent<Actor>();
-            if (target != null)
-            {
-                if (Owner.GetType() != target.GetType())
-                {
-                    SetDamageBox(target.transform.position, Data.Value);
-                    SetHitEffect();
-                    target.ApplyDamage(Data.Value);
-                    count++;
-                }
-            }
+            OnTriggerActor(other);
         }
     }
-    private void Update()
+
+    protected override void OnTriggerActorCompleted(Actor actor)
     {
-        if (IsExcute)
-        {
-            time += Time.deltaTime;
-            if (time >= destroyTime)
-            {
-                Destroy(this.gameObject);
-            }
-        }
+        actor.ApplyDamage(transform, Data.Value);
+        SetDamageBox(transform.position, Data.Value);
+        Destroy(this.gameObject, 5f);
+        isEnter = true;
     }
 }

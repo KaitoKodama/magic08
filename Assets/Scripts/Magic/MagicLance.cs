@@ -17,13 +17,14 @@ public class MagicLance : Magic
     }
     private void OnTriggerEnter(Collider other)
     {
-        OnTriggerActor(other, Data.Value, OnTriggerActorCompleted);
-        OnTriggerField(other, OnTriggerFieldCompleted);
+        OnTriggerActor(other);
+        OnTriggerField(other);
     }
 
 
-    private void OnTriggerActorCompleted()
+    protected override void OnTriggerActorCompleted(Actor actor)
     {
+        actor.ApplyDamage(transform, Data.Value);
         SetDamageBox(transform.position, Data.Value);
         SetHitEffect();
 
@@ -33,9 +34,10 @@ public class MagicLance : Magic
             Destroy(this.gameObject);
         }
     }
-    private void OnTriggerFieldCompleted()
+    protected override void OnTriggerFieldCompleted()
     {
         SetBreakEffect();
+        Destroy(this.gameObject);
     }
     protected override void Generate(DataVisual data, Transform origin)
     {
