@@ -14,6 +14,7 @@ public abstract class Magic : MonoBehaviour
     // 外部共有関数
     //------------------------------------------
     public DataVisual Data => data;
+    public Actor Owner => owner;
     public void OnGenerate(Actor owner, DataVisual data, Transform origin)
     {
         this.data = data;
@@ -35,15 +36,27 @@ public abstract class Magic : MonoBehaviour
     protected virtual void Generate(DataVisual data, Transform origin) { }
     protected virtual void Excute(Vector3 expect) { }
     protected virtual void OnTriggerActorCompleted(Actor actor) { }
+    protected virtual void OnTriggerMagicCompleted(Magic magic) { }
     protected virtual void OnTriggerFieldCompleted() { }
 
 
     //------------------------------------------
     // 継承先共有関数 - 戻り値あり
     //------------------------------------------
-    protected Actor Owner => owner;
     protected Transform TrackTarget { get; private set; }
     protected bool IsExcute { get; private set; } = false;
+    protected bool IsSameOwner(Actor target)
+    {
+        var ownerIsEnemy = owner.GetType().IsSubclassOf(typeof(Enemy));
+        var targetIsEnemy = target.GetType().IsSubclassOf(typeof(Enemy));
+        var ownerType = ownerIsEnemy ? typeof(Enemy) : typeof(Player);
+        var targetType = targetIsEnemy ? typeof(Enemy) : typeof(Player);
+        if (ownerType != targetType)
+        {
+            return true;
+        }
+        return false;
+    }
 
 
     //------------------------------------------
@@ -73,7 +86,7 @@ public abstract class Magic : MonoBehaviour
             transform.forward = TrackTarget.forward;
         }
     }
-    protected void SetHitEffect(bool destroy = true)
+    protected void SetHitEffect()
     {
         var effect = Locator<PoolEffect>.I;
         if (effect != null)
@@ -84,7 +97,6 @@ public abstract class Magic : MonoBehaviour
                 pool.transform.position = transform.position;
             }
         }
-        if (destroy) Destroy(this.gameObject);
     }
     protected void SetDamageBox(Vector3 startPos, float damage)
     {
@@ -119,13 +131,24 @@ public abstract class Magic : MonoBehaviour
         var target = col.gameObject.GetComponent<Actor>();
         if (target != null)
         {
-            if (owner.GetType() != target.GetType())
+            if (IsSameOwner(target))
             {
-                if (target.GetComponent<Enemy>())
+                if (target.GetType() != typeof(Player))
                 {
                     Locator<PlayerInput>.I.OnVivration(0.1f, PlayerInput.VivrateHand.Holding);
                 }
                 OnTriggerActorCompleted(target);
+            }
+        }
+    }
+    protected void OnTriggerMagic(Collider col)
+    {
+        var magic = col.gameObject.GetComponent<Magic>();
+        if (magic != null)
+        {
+            if (IsSameOwner(magic.Owner))
+            {
+                OnTriggerMagicCompleted(magic);
             }
         }
     }

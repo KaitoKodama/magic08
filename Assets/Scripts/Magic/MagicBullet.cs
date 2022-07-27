@@ -40,6 +40,7 @@ public class MagicBullet : Magic
         actor.ApplyDamage(transform, Data.Value);
         SetDamageBox(transform.position, Data.Value);
         SetHitEffect();
+        Destroy(this.gameObject);
     }
     protected override void OnTriggerFieldCompleted()
     {

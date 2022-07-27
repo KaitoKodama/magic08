@@ -15,6 +15,7 @@ public class MagicCircle : Magic
         }
     }
 
+
     protected override void OnTriggerActorCompleted(Actor actor)
     {
         actor.ApplyDamage(transform, Data.Value);

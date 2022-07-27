@@ -1,35 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MagicContext;
 
-public class MagicExplodeArrow : Magic
+public class MagicCutter : Magic
 {
-    [SerializeField] MagicExplode magicExplodePrafab = default;
+    [SerializeField] ParticleSystem[] cores = default;
+    [SerializeField] GradiantSet gradiantSet = default;
     private Rigidbody rigid;
     private Transform forceTarget;
-    private float riseSpeed = 3f;
+    [SerializeField] private float forceSpeed = 5f;
+    private float time = 0;
+    private float forceTime = 5f;
+    private bool isForceEnd = false;
 
 
     private void Update()
     {
         UpdateChaseIfNotExcute();
+        if (IsExcute && forceTarget != null && !isForceEnd)
+        {
+            time += Time.deltaTime;
+            if (time >= forceTime)
+            {
+                isForceEnd = true;
+                rigid.useGravity = true;
+            }
+        }
     }
     private void FixedUpdate()
     {
-        if (IsExcute && forceTarget != null && !rigid.useGravity)
+        if (forceTarget != null)
         {
-            float distance = Vector3.Distance(transform.position, forceTarget.position);
-            if (distance <= 2f || transform.position.y >= 3f)
-            {
-                rigid.useGravity = true;
-            }
-            else
-            {
-                var target = forceTarget.position;
-                target.y += 5f;
-                var force = (target - transform.position).normalized;
-                rigid.AddForce(force * Time.fixedDeltaTime * riseSpeed);
-            }
+            var target = forceTarget.position;
+            var force = (target - transform.position).normalized;
+            rigid.AddForce(force * Time.fixedDeltaTime * forceSpeed);
+            transform.LookAt(forceTarget);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -39,10 +45,18 @@ public class MagicExplodeArrow : Magic
     }
 
 
-    protected override void Excute(Vector3 expect)
+    protected override void Generate(DataVisual data, Transform origin)
     {
         rigid = GetComponent<Rigidbody>();
-
+        foreach (var core in cores)
+        {
+            var co = core.colorOverLifetime;
+            var grad = gradiantSet.GetGradient(data.Attribute);
+            co.color = grad;
+        }
+    }
+    protected override void Excute(Vector3 expect)
+    {
         Transform targetform = null;
         float closet = float.MaxValue;
         var targets = GameObject.FindGameObjectsWithTag(GetTagFromObjectOfType());
@@ -59,19 +73,18 @@ public class MagicExplodeArrow : Magic
             }
         }
         if (targetform != null) forceTarget = targetform;
-        SetRigidVelocity(expect, 2);
+        rigid.velocity = expect * 5f;
     }
 
 
     protected override void OnTriggerActorCompleted(Actor actor)
     {
-        CloningGenerate<MagicExplode>(magicExplodePrafab.gameObject);
-        SetBreakEffect();
+        actor.ApplyDamage(transform, Data.Value);
+        SetHitEffect();
         Destroy(this.gameObject);
     }
     protected override void OnTriggerFieldCompleted()
     {
-        CloningGenerate<MagicExplode>(magicExplodePrafab.gameObject);
         SetBreakEffect();
         Destroy(this.gameObject);
     }
